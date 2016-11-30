@@ -1,0 +1,25 @@
+# Dependencies
+markdown:         kramdown
+highlighter:      pygments
+
+# Permalinks
+permalink:        pretty
+
+
+# Setup
+title:            'OpenNMT'
+tagline:          'NMT'
+description:      'An open-source neural machine translation system.'
+url:              https://harvardnlp.github.io/seq2seq-attn-web/
+baseurl:          /seq2seq-attn-web/
+
+author:
+  name:           'Yoon Kim and HarvardNLP'
+  url:            https://twitter.com/harvardnlp
+
+
+# Custom vars
+version:          0.1
+
+github:
+  repo:           https://github.com/harvardnlp/seq2seq-attn
