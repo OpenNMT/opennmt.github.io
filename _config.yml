@@ -1,6 +1,6 @@
 # Dependencies
 markdown:         redcarpet
-highlighter:      pygments
+highlighter:      rouge
 
 # Permalinks
 permalink:        pretty
@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            'OpenNMT'
 tagline:          'NMT'
-description:      'An open-source neural machine translation system. Made by Yoon Kim and <a href="https://twitter.com/harvardnlp" target="_blank">@harvardnlp</a>.'
+description:      'An open-source neural machine translation system.'
 url:              http://harvardnlp.github.io/
 baseurl:          /
 
@@ -22,4 +22,4 @@ author:
 version:          0.1
 
 github:
-  repo:           https://github.com/harvardnlp/seq2seq-attn
+  repo:           https://github.com/opennmt/opennmt
