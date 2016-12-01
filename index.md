@@ -21,4 +21,3 @@ accuracy. Features include:
 * Extensions to allow other sequence generation tasks such as summarization and image captioning.
 
 
-
