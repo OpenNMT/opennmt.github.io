@@ -10,11 +10,9 @@ order: 2
 ## Installation
 
 
-OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It makes use of the libraries: nn, nngraph, and cunn.
+OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It makes use of the libraries: nn, nngraph, and cunn. We highly recommend use of GPU-based training.
 
 Alternatively there is a Docker container available at <a href="https://hub.docker.com/r/harvardnlp/opennmt/">here</a>.
-
-We highly recommend use of GPU-based training.
 
 ## Quickstart
 
