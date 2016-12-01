@@ -7,6 +7,11 @@ title: Guide
 
 ## Installation
 
+
+OpenNMT only requires a vanilla torch/cutorch install. It uses `nn`, `nngraph`, and `cunn`.
+
+Alternatively there is a (CUDA) Docker container available at <a href="https://hub.docker.com/r/harvardnlp/opennmt/">here</a>.
+
 ## Quickstart
 
 OpenNMT consists of three commands:
@@ -17,11 +22,11 @@ OpenNMT consists of three commands:
 
 2) Train the model.
 
-```th train.lua -data data/demo-train.t7 -save_file demo-model```
+```th train.lua -data data/demo-train.t7 -save_file model```
 
 3) Translate sentences.
 
-```th evaluate.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict```
+```th evaluate.lua -model model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict```
 
 Let's walk through each of these commands in more detail. 
 
