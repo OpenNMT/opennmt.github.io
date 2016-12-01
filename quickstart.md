@@ -10,9 +10,11 @@ order: 2
 ## Installation
 
 
-OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It uses `nn`, `nngraph`, and `cunn`.
+OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It makes use of the libraries: nn, nngraph, and cunn.
 
-Alternatively there is a (CUDA) Docker container available at <a href="https://hub.docker.com/r/harvardnlp/opennmt/">here</a>.
+Alternatively there is a Docker container available at <a href="https://hub.docker.com/r/harvardnlp/opennmt/">here</a>.
+
+We highly recommend use of GPU-based training.
 
 ## Quickstart
 
@@ -39,10 +41,9 @@ Let's walk through each of these commands in more detail.
 th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo
 ```
 
-The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/preprocess/">here</a>.
+The `preprocess.lua` command can also take additional <a href="https://opennmt.github.io/OpenNMT/details/preprocess/">options</a>.  
 
-
-We will be working with some example data in `data/` folder.
+Here we are working with example data in `data/` folder.
 The data consists of a source (`src`) and target (`targ`) data.
 This will take the source/target train/valid files (`src-train.txt, targ-train.txt,
 src-val.txt, targ-val.txt`). There is one sentence per line, and words are space separated.
@@ -94,12 +95,16 @@ Internally the system never touches the words themselves, but uses these indices
 
 > th train.lua -data_file data/demo-train.t7 -savefile demo-model
 
+
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
 can also add `-gpuid 1` to use (say) GPU 1.
 
-The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/train/">here</a>.
+The `train.lua` command can take many additional <a
+href="https://opennmt.github.io/OpenNMT/details/train/">options</a>
+describing the desired model size and structure as
+well as the training procedure and initialization.
 
 
 ### Step 3: Translate
@@ -113,10 +118,19 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/evaluate/">here</a>.
+The `evaluate.lua` command can take  more <a
+href="https://opennmt.github.io/OpenNMT/details/train/">options</a>
+describing the beam search procedure.
 
 
-## Features
+## Additional Features
+
+### Initialization with Word Embeddings
+
+### Word Features
+
+### Compressing Models
+
+### Evaluation
 
 
-## Advanced Features
