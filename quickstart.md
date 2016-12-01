@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Guide
-order: 2xxxxx
+order: 2
 ---
 
 * TOC
