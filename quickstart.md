@@ -1,4 +1,7 @@
-# OpenNMT Quickstart
+---
+layout: page
+title: Quickstart
+---
 
 OpenNMT consists of three commands 
 
@@ -20,8 +23,7 @@ Let's walk through each of these commands in more detail.
 ## Step 1: Preprocess Data
 
 ```
-th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt
-    -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo
+th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo
 ```
 
 
