@@ -3,12 +3,13 @@ layout: page
 title: Guide
 ---
 
-:toc:
+* TOC
+{:toc}
 
 ## Installation
 
 
-OpenNMT only requires a vanilla torch/cutorch install. It uses `nn`, `nngraph`, and `cunn`.
+OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It uses `nn`, `nngraph`, and `cunn`.
 
 Alternatively there is a (CUDA) Docker container available at <a href="https://hub.docker.com/r/harvardnlp/opennmt/">here</a>.
 
