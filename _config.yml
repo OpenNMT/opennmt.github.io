@@ -22,4 +22,4 @@ author:
 version:          0.1
 
 github:
-  repo:           https://github.com/harvardnlp/seq2seq-attn
+  repo:           https://github.com/opennmt/opennmt
