@@ -1,30 +1,38 @@
 ---
 layout: page
-title: Quickstart
+title: Guide
 ---
 
-OpenNMT consists of three commands 
+:toc:
 
-1. Preprocess the data.
+## Installation
 
-> th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo
+## Quickstart
 
-2. Train the model.
+OpenNMT consists of three commands:
 
-> th train.lua -data data/demo-train.t7 -save_file demo-model
+1) Preprocess the data.
 
-3. Translate sentences.
+```th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo```
 
-> th evaluate.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict
+2) Train the model.
+
+```th train.lua -data data/demo-train.t7 -save_file demo-model```
+
+3) Translate sentences.
+
+```th evaluate.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict```
 
 Let's walk through each of these commands in more detail. 
 
 
-## Step 1: Preprocess Data
+### Step 1: Preprocess Data
 
 ```
 th preprocess.lua -train_src_file data/src-train.txt -train_targ_file data/targ-train.txt -valid_src_file data/src-val.txt -valid_targ_file data/targ-val.txt -output_file data/demo
 ```
+
+The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/preprocess/">here</a>.
 
 
 We will be working with some example data in `data/` folder.
@@ -75,7 +83,7 @@ with 11
 
 Internally the system never touches the words themselves, but uses these indices.
 
-## Step 2: Train the model
+### Step 2: Train the model
 
 > th train.lua -data_file data/demo-train.t7 -savefile demo-model
 
@@ -84,7 +92,10 @@ and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
 can also add `-gpuid 1` to use (say) GPU 1.
 
-## Step 3: Translate
+The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/train/">here</a>.
+
+
+### Step 3: Translate
 
 > th evaluate.lua -model demo-model_final.t7 -src_file data/src-val.txt -output_file pred.txt -src_dict data/demo.src.dict -targ_dict data/demo.targ.dict
 
@@ -95,3 +106,10 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
+The full set of command-line options is available <a href="https://opennmt.github.io/OpenNMT/details/evaluate/">here</a>.
+
+
+## Features
+
+
+## Advanced Features
