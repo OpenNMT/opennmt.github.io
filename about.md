@@ -5,13 +5,13 @@ order: 5
 ---
 
 
-OpenNMT is made and supported by <a href="http://yoon.io">Yoon Kim</a> and <a href="http://nlp.seas.harvard.edu">harvardnlp</a>.
+OpenNMT was originally developed by <a href="http://yoon.io">Yoon Kim</a> and <a href="http://nlp.seas.harvard.edu">harvardnlp</a>.
 
 <center>
 <img style="margin:40px" width="200px" src="http://lstm.seas.harvard.edu/logo_nlp.png" />
 </center>
 
-Major source contributions also come from <a href="http://www.systransoft.com/">SYSTRAN</a>.
+Major source contributions and support come from <a href="http://www.systransoft.com/">SYSTRAN</a>.
 
 <center>
 <img style="margin:40px" width="200px" src="http://www.systransoft.com/wp-content/themes/systran/img/common/logo.png" />
