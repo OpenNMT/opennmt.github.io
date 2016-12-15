@@ -20,7 +20,3 @@ Features include:
 * Simple general-purpose interface, only requires and source/target data files.
 * Speed and memory optimizations for high-performance GPU training.
 * Extensions to allow other sequence generation tasks such as summarization and image captioning.
-
-
-
-
