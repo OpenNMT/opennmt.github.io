@@ -34,9 +34,7 @@ Let's walk through each of these commands in more detail.
 
 ### Step 1: Preprocess Data
 
-~~~ sh
-th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -output data/demo
-~~~
+```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -output data/demo```
 
 The `preprocess.lua` command can also take additional <a href="https://opennmt.github.io/OpenNMT/Options#preprocess">options</a>.  
 
@@ -45,7 +43,7 @@ The data consists of a source (`src`) and target (`tgt`) data.
 This will take the source/target train/valid files (`src-train.txt, tgt-train.txt,
 src-val.txt, tgt-val.txt`). There is one sentence per line, and words are space separated.
 
-> head -n 3 data/tgt-train.txt
+* data/tgt-train.txt
 
 ```
 Es geht nicht an , dass über Ausführungsbestimmungen , deren Inhalt , Zweck und Ausmaß vorher nicht bestimmt ist , zusammen mit den nationalen Bürokratien das Gesetzgebungsrecht des Europäischen Parlaments ausgehebelt wird .
@@ -53,7 +51,7 @@ Meistertrainer und leitender Dozent des italienischen Fitnessverbands für Aerob
 Also kam ich nach Südafrika " , erzählte eine Frau namens Grace dem Human Rights Watch-Mitarbeiter Gerry Simpson , der die Probleme der zimbabwischen Flüchtlinge in Südafrika untersucht .
 ```
 
-> head -n 3 data/src-train.txt
+* data/src-train.txt
 
 ```
 It is not acceptable that , with the help of the national bureaucracies , Parliament &apos;s legislative prerogative should be made null and void by means of implementing provisions whose content , purpose and extent are not laid down in advance .
@@ -70,7 +68,7 @@ After running the system will build the following files:
 The `*.dict` files are needed to check vocabulary, or to preprocess data with fixed vocabularies.
 These files are simple human-readable dictionaries.
 
-> head -n 10 data/demo.src.dict
+* data/demo.src.dict
 
 ```
 <blank> 1
@@ -90,8 +88,7 @@ Internally the system never touches the words themselves, but uses these indices
 
 ### Step 2: Train the model
 
-```
-th train.lua -data data/demo-train.t7 -save_model demo-model
+```th train.lua -data data/demo-train.t7 -save_model demo-model
 ```
 
 The main train command is quite simple. Minimally it takes a data file
@@ -107,8 +104,7 @@ well as the training procedure and initialization.
 
 ### Step 3: Translate
 
-```
-th translate.lua -model demo-model_final.t7 -src data/src-val.txt  -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict
+```th translate.lua -model demo-model_final.t7 -src data/src-val.txt  -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict
 ```
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
@@ -146,7 +142,8 @@ before the preprocessing step, replacing `word` with
 
 As an example, consider the data in `data/src-train-case.txt` which uses a separate features to represent the case of each word. 
 
-> head -n 1 data/src-train-case.txt
+* data/src-train-case.txt
+
 ```
 it-|-C is-|-l not-|-l acceptable-|-l that-|-l ,-|-n with-|-l the-|-l help-|-l of-|-l the-|-l national-|-l bureaucracies-|-l ,-|-n parliament-|-C &apos;s-|-l legislative-|-l prerogative-|-l should-|-l be-|-l made-|-l null-|-l and-|-l void-|-l by-|-l means-|-l of-|-l implementing-|-l provisions-|-l whose-|-l content-|-l ,-|-n purpose-|-l and-|-l extent-|-l are-|-l not-|-l laid-|-l down-|-l in-|-l advance-|-l .-|-n
 ```
@@ -169,8 +166,7 @@ It is often important to train models using a GPU, but may be
 necessary to deploy them on a standard CPU system. We provide a script
 `release_model.lua` to convert trained models to work in CPU mode. 
 
-```
-th release_model.lua -model demo-model_final.t7 -output_model demo-cpu.t7 
+```th release_model.lua -model demo-model_final.t7 -output_model demo-cpu.t7 
 ```
 
 ### Translation and Beam Search
