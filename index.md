@@ -17,6 +17,8 @@ maintaining efficiency and state-of-the-art translation accuracy.
 
 Features include:
 
-* Simple general-purpose interface, only requires and source/target data files.
+* Simple general-purpose interface, requires only source/target files.
 * Speed and memory optimizations for high-performance GPU training.
-* Extensions to allow other sequence generation tasks such as summarization and image captioning.
+* Latest research features to improve translation performance.
+* Pretrained models available for several language pairs (coming soon).
+* Extensions to allow other sequence generation tasks such as summarization and image-to-text generation.

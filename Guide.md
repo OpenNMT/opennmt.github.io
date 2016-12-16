@@ -9,7 +9,6 @@ order: 2
 
 ## Installation
 
-
 OpenNMT only requires a vanilla <a href="http://torch.ch/docs/getting-started.html">Torch</a> install. It makes use of the libraries: nn, nngraph, and cunn. We highly recommend use of GPU-based training.
 
 Alternatively there is a <a href="https://hub.docker.com/r/harvardnlp/opennmt/">Docker image</a> available.
@@ -91,8 +90,9 @@ Internally the system never touches the words themselves, but uses these indices
 
 ### Step 2: Train the model
 
-> th train.lua -data data/demo-train.t7 -save_model demo-model
-
+```
+th train.lua -data data/demo-train.t7 -save_model demo-model
+```
 
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
@@ -107,7 +107,9 @@ well as the training procedure and initialization.
 
 ### Step 3: Translate
 
-> th evaluate.lua -model demo-model_final.t7 -src data/src-val.txt  -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict
+```
+th translate.lua -model demo-model_final.t7 -src data/src-val.txt  -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict
+```
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
 
@@ -120,15 +122,90 @@ The `evaluate.lua` command can take  more <a
 href="https://opennmt.github.io/OpenNMT/Options#evaluate">options</a>
 describing the beam search procedure.
 
-
 ## Additional Features
 
-### Initialization with Word Embeddings
+### Pre-trained Embeddings
+
+When training with small amounts of data, performance can be improved
+by starting with pretrained embeddings. The arguments
+`-pre_word_vecs_dec` and `-pre_word_vecs_enc` can be used to specify
+these files. The pretrained embeddings must be manually constructed
+torch serialized matrices that correspond to the src and tgt
+dictionary files. By default these embeddings will be updated during
+training, but they can be held fixed using `-fix_word_vecs_enc` and
+`-fix_word_vecs_dec`.
 
 ### Word Features
 
-### Compressing Models
+OpenNMT supports including additional features on source and target
+words.  These features are are given their embeddings which are
+concatenated (or summed depending on `-feat_merge` argument) upon input, and generated (independently) on
+the decoder side. To specify features, simply modify the training data
+before the preprocessing step, replacing `word` with
+`words-|-feat1-|-feat2...` using the special symbol `-|-`.
 
-### Evaluation
+As an example, consider the data in `data/src-train-case.txt` which uses a separate features to represent the case of each word. 
 
-## Extending the Model
+> head -n 1 data/src-train-case.txt
+```
+it-|-C is-|-l not-|-l acceptable-|-l that-|-l ,-|-n with-|-l the-|-l help-|-l of-|-l the-|-l national-|-l bureaucracies-|-l ,-|-n parliament-|-C &apos;s-|-l legislative-|-l prerogative-|-l should-|-l be-|-l made-|-l null-|-l and-|-l void-|-l by-|-l means-|-l of-|-l implementing-|-l provisions-|-l whose-|-l content-|-l ,-|-n purpose-|-l and-|-l extent-|-l are-|-l not-|-l laid-|-l down-|-l in-|-l advance-|-l .-|-n
+```
+
+### Training From Snapshots
+
+As training translation models can take a long time (sometimes many
+weeks), OpenNMT supports resuming a model from a snapshot. By default,
+it will save a snapshot every epoch, but this can by altered with the
+`-save_every` option. Snapshots are fast to save, but can be quite
+large. To resume from a snapshot use the `-train_from` option with
+the starting snapshot. By default the system will train starting from 
+parameter using newly passed in options. To override this, and 
+continue from the previous location use the `-continue` option.
+
+
+### Deploying Models
+
+It is often important to train models using a GPU, but may be
+necessary to deploy them on a standard CPU system. We provide a script
+`release_model.lua` to convert trained models to work in CPU mode. 
+
+```
+th release_model.lua -model demo-model_final.t7 -output_model demo-cpu.t7 
+```
+
+### Translation and Beam Search
+
+By default translation is done using beam search. The `-beam_size`
+option can be used to trade-off translation time and search accuracy,
+with `-beam_size 1` giving greedy search. The small default beam size
+is often enough in practice. Beam search can also be used to provide
+an approximate n-best list of translations by setting `-n_best`
+greater than 1. For analysis, the translation command also takes an
+oracle/gold `-tgt` file and will output a comparison of scores.
+
+
+### Translating UNK Words 
+
+The default translation mode allows the model to produce the UNK
+symbol when it is not sure of the specific target word. Often times
+UNK symbols will correspond to proper names that can be directly
+transposed between languages. The `-replace_unk` option will
+substitute UNK with a source word using the attention of the
+model. Alternatively, advanced users may prefer to provide a
+preconstructed phrase table from an external aligner (such as
+fast_align) using the `-phrase_table` option to allow for non-
+identity replacement.
+
+## Extending the System (Image-to-Text)
+
+OpenNMT is explicitly separated out into a library and application 
+section. All modeling and training code can be directly used within
+other Torch applications. 
+
+As an example use case we have released an extension for translating
+from images-to-text. This model replaces the source-side word
+embeddings with a convolutional image network. The full model is
+available <a href="">here</a>.
+
+
+  
