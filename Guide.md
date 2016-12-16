@@ -34,7 +34,7 @@ Let's walk through each of these commands in more detail.
 
 ### Step 1: Preprocess Data
 
-~~~ shell
+~~~ sh
 th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -output data/demo
 ~~~
 
