@@ -19,7 +19,7 @@ Major source contributions and support come from <a href="http://www.systransoft
 
 ## Research
 
-The main model is based on the paper
+The main model is based on the papers [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) Bahdanau et al. ICLR 2015 and
 [Effective Approaches to Attention-based
 Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf),
 Luong et al. EMNLP 2015.
