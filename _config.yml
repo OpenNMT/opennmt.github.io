@@ -12,7 +12,7 @@ tagline:          'NMT'
 description:      'An open-source neural machine translation system.'
 url:              https://opennmt.github.io/
 baseurl:          https://opennmt.github.io/
-
+google_analytics: UA-89222039-1
 author:
   name:           'Yoon Kim and HarvardNLP'
   url:            https://twitter.com/harvardnlp
