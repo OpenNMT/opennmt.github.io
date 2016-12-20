@@ -1,10 +1,15 @@
+---
+layout: page
+title: Models
+order: 3
+---
 
-Models that we have trained using OpenNMT
 
+Available models trained using OpenNMT
 
 * [English -> German](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19.t7)
 
-Coming Soon
+More models coming soon
 
 * German -> English 
 * Summarization (Gigaword) 
