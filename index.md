@@ -11,7 +11,7 @@ open-source (MIT) neural machine translation system utilizing the
 
 <center style="padding: 40px"><img width="80%" src="http://opennmt.github.io/simple-attn.png" /></center>
 
-OpenNMT is used as provided in <a href="http://demo-pnmt.systran.net/">production</a> by major translation providers.
+OpenNMT is used as provided in <a href="https://demo-pnmt.systran.net/">production</a> by major translation providers.
 The system is designed to be simple to use and easy to extend, while
 maintaining efficiency and state-of-the-art translation accuracy.
 
