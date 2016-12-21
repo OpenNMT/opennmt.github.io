@@ -11,11 +11,12 @@ Available models trained using OpenNMT
 
 * [English -> German](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19.t7)
 * [German -> English](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.de-en_epoch13_8.98.t7)
+* [English Summarization](https://s3.amazonaws.com/opennmt-models/sum_model_epoch11_14.62.t7)
 
 More models coming soon
 
 * FR,ES,PT,IT,RO<>FR,ES,PT,IT,RO
-* Summarization (Gigaword)
+
 
 ## Benchmarks
 
@@ -34,3 +35,10 @@ If you have a competitive model - please contact us at info@opennmt.net with nec
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------|:-----|
 | 2016/20/12<br>Baseline | [WMT15 - Translation Task](http://www.statmt.org/wmt15/translation-task.html)<br><small>+ Raw Europarl v7<br>+ Common Crawl<br>+ News Commentary v10<br>OpenNMT `aggressive` tokenization<br>OpenNMT `preprocess.lua` default option (50k vocab, 50 max sent, shuffle) | OpenNMT `111f16a` | default options:<br>2 layers, RNN 500, WE 500, input feed<br>13 epochs | <small>Intel(R) Core(TM) i7-6800K CPU @ 3.40GHz, 256Gb Mem, trained on 1 GPU TITAN X (Pascal) | 346 min/epoch, 2.5Gb GPU usage | valid newstest2013:<br>PPL: 8.98<br>newstest2014 (cleaned):<br>NIST=6.4531<br>BLEU=0.2067 | 692M [here](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.de-en_epoch13_8.98.t7) |
+
+### English Summarization
+
+| Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Scores | Model |
+|:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------|:-----|
+| 2016/21/12<br>Baseline | [Gigaword Standard](https://github.com/harvardnlp/sent-summary) | OpenNMT `111f16a` | default options:<br>2 layers, RNN 500, WE 500, input feed<br>11 epochs | <small>Trained on 1 GPU TITAN X  |  | Gigaword F-Score R1: 33.13 R2: 16.09 RL: 31.00  | 572M [here](https://s3.amazonaws.com/opennmt-models/sum_model_epoch11_14.62.t7) |
+
