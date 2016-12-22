@@ -16,7 +16,9 @@ Available models trained using OpenNMT
 More models coming soon
 
 * FR,ES,PT,IT,RO<>FR,ES,PT,IT,RO
-
+* Ubuntu Dialogue Dataset
+* Syntactic Parsing
+* Image-to-Text
 
 ## Benchmarks
 
