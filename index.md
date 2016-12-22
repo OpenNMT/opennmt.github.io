@@ -17,8 +17,8 @@ maintaining efficiency and state-of-the-art translation accuracy.
 
 Features include:
 
-* Simple general-purpose interface, requires only source/target files.
+* Simple <a href="Guide">general-purpose interface</a>, requires only source/target files.
 * Speed and memory optimizations for high-performance GPU training.
-* Latest research features to improve translation performance.
-* Pretrained models available for several language pairs (coming soon).
-* Extensions to allow other sequence generation tasks such as summarization and image-to-text generation.
+* Latest <a href="http://opennmt.net//Guide/#additional-features">research</a> features to improve translation performance.
+* Pretrained <a href="Models">models</a> available for several language pairs.
+* Extensions to allow other sequence generation tasks such as <a href="Models">summarization</a> and <a href="https://github.com/opennmt/im2text">image-to-text</a> generation.
