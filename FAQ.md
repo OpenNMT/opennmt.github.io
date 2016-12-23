@@ -99,6 +99,11 @@ You can install OpenNMT as a library in the standard way,
 
 ```luarocks make rocks/opennmt-scm-1.rockspec```
 
+### How can I trust that the current version of OpenNMT is working?
+
+We run a daily integration test of the system on EC2 to check that it is functioning
+properly. The logs of the system are publicly available in the <a href="https://github.com/OpenNMT/IntegrationTesting/tree/master/logs">integration test</a> repo.  
+
 ## Contributions
 
 ### Can I send a pull request?
