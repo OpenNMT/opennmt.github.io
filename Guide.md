@@ -41,7 +41,7 @@ The `preprocess.lua` command can also take additional <a href="https://opennmt.g
 Here we are working with example data in `data/` folder.
 The data consists of a source (`src`) and target (`tgt`) data.
 This will take the source/target train/valid files (`src-train.txt, tgt-train.txt,
-src-val.txt, tgt-val.txt`). There is one sentence per line, and words are space separated.
+src-val.txt, tgt-val.txt`). There is one sentence per line, and words are space separated (the corpus is said "tokenized" - see <a href="https://github.com/OpenNMT/OpenNMT/tree/master/tools#tokenizationdetokenization">here</a> if your own corpus is not yet tokenized).
 
 * data/tgt-train.txt
 
