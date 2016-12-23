@@ -72,14 +72,16 @@ First you need to install `nvidia-docker`.
 
 ```
 wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
-sudo dpkg -i /tmp/nvidia-docker*.deb```
+sudo dpkg -i /tmp/nvidia-docker*.deb
+```
 
 If this command does not work, you may need to run the following updates, 
 
 ```
 sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
 sudo apt-get update
-sudo apt-get install docker-engine nvidia-modprobe```
+sudo apt-get install docker-engine nvidia-modprobe
+```
 
 Then simply run our Docker container
 
