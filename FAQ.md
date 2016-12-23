@@ -66,7 +66,7 @@ You may also need to install the `tds` library,
 
 Afterwards you can just checkout the repo and run. 
 
-### How can I use OpenNMT with Docker (on Ubuntu)?
+### How can I use this system with Docker (on Ubuntu)?
 
 First you need to install `nvidia-docker`.
 
@@ -87,7 +87,7 @@ Once in the instance, check out the latest code
 
 ```git clone https://github.com/opennmt/opennmt.git```
 
-### How can I use OpenNMT on Amazon/Google cloud?
+### What about on Amazon EC2?
 
 The best way to do this is through Docker. We have a public AMI with the preliminary
 CUDA drivers installed: `ami-c12f86a1`. Start a P2/G2 GPU instance with this AMI and
