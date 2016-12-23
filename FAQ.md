@@ -56,12 +56,17 @@ want training to finish in a reasonable amount of time. For
 medium-size models you will need at least 4GB; for full-size
 state-of-the-art models 8-12GB is recommend.
 
-### How can I install this system on my own system (with or without root)?
+### How can I install OpenNMT on my own system (with or without root)?
 
 Follow the quick-start instructions on the <a href="http://torch.ch/docs/getting-started.html">Torch page</a>.
 
+You may also need to install the `tds` library,
 
-### How can I use this system with Docker (on Ubuntu)?
+```luarocks install tds```
+
+Afterwards you can just checkout the repo and run. 
+
+### How can I use OpenNMT with Docker (on Ubuntu)?
 
 First you need to install `nvidia-docker`.
 
@@ -82,7 +87,7 @@ Once in the instance, check out the latest code
 
 ```git clone https://github.com/opennmt/opennmt.git```
 
-### How can I use this system on Amazon/Google cloud?
+### How can I use OpenNMT on Amazon/Google cloud?
 
 The best way to do this is through Docker. We have a public AMI with the preliminary
 CUDA drivers installed: `ami-c12f86a1`. Start a P2/G2 GPU instance with this AMI and
