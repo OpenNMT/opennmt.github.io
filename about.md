@@ -36,7 +36,7 @@ at [SYSTRAN](http://www.systransoft.com). Specifically, there are functionalitie
 Zhou et al, TACL 2016.
 * [Guided Alignment Training for Topic-Aware Neural Machine Translation](https://arxiv.org/pdf/1607.01628). Chen et al., arXiv:1607.01628.
 * [Linguistic Input Features Improve Neural Machine Translation](https://arxiv.org/pdf/1606.02892). Senrich et al., arXiv:1606.02892
-
+* [Neural Machine Translation of Rare Words with Subword Units](https://www.aclweb.org/anthology/P/P16/P16-1162.pdf). Senrich et al., ACL 2016.
 
 ## Acknowledgments
 
