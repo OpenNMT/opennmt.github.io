@@ -138,14 +138,14 @@ words.  These features are are given their embeddings which are
 concatenated (or summed depending on `-feat_merge` argument) upon input, and generated (independently) on
 the decoder side. To specify features, simply modify the training data
 before the preprocessing step, replacing `word` with
-`words-|-feat1-|-feat2...` using the special symbol `-|-`.
+`words￨feat1￨feat2...` using the special symbol `￨` (unicode character FFE8).
 
 As an example, consider the data in `data/src-train-case.txt` which uses a separate features to represent the case of each word. 
 
 * data/src-train-case.txt
 
 ```
-it-|-C is-|-l not-|-l acceptable-|-l that-|-l ,-|-n with-|-l the-|-l help-|-l of-|-l the-|-l national-|-l bureaucracies-|-l ,-|-n parliament-|-C &apos;s-|-l legislative-|-l prerogative-|-l should-|-l be-|-l made-|-l null-|-l and-|-l void-|-l by-|-l means-|-l of-|-l implementing-|-l provisions-|-l whose-|-l content-|-l ,-|-n purpose-|-l and-|-l extent-|-l are-|-l not-|-l laid-|-l down-|-l in-|-l advance-|-l .-|-n
+it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of￨l the￨l national￨l bureaucracies￨l ,￨n parliament￨C &apos;s￨l legislative￨l prerogative￨l should￨l be￨l made￨l null￨l and￨l void￨l by￨l means￨l of￨l implementing￨l provisions￨l whose￨l content￨l ,￨n purpose￨l and￨l extent￨l are￨l not￨l laid￨l down￨l in￨l advance￨l .￨n
 ```
 
 ### Training From Snapshots
