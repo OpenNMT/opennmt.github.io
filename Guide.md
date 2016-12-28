@@ -159,6 +159,22 @@ the starting snapshot. By default the system will train starting from
 parameter using newly passed in options. To override this, and 
 continue from the previous location use the `-continue` option.
 
+### Parallel training
+
+To accelerate training, you can use *data parallelism* for the training.
+Data parallelism is the possibility to use several GPUs for training with parallel
+batches on different *replicas*. To enable this option use `-nparallel` option which requires
+availability of as many GPU cores. There are 2 different modes:
+
+* synchronous parallelism: in this mode (default), each replica process in parallel a different batch
+at each iteration. The gradients from each replica are accumulated, and parameters
+updated and synchronized.
+* asynchronous parallelism: in this mode (activated with `-async_parallel`, the different replicas are independently
+calculating their own gradient, updating a master copy of the parameters and getting updated values
+of the parameters.
+Note that a GPU core is dedicated to storage of the master copy of the parameters and is not used
+for training. Also, to enable convergence at the beginning of the training, only one replica is working for
+the first `async_parallel_minbatch` iterations.
 
 ### Deploying Models
 
