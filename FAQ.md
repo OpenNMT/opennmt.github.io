@@ -108,6 +108,33 @@ You can install OpenNMT as a library in the standard way,
 We run a daily integration test of the system on EC2 to check that it is functioning
 properly. The logs of the system are publicly available in the <a href="https://github.com/OpenNMT/IntegrationTesting/tree/master/logs">integration test</a> repo.  
 
+## Models
+
+### How can I replicate the full-scale NMT translation results? 
+
+We have posted a complete <a href="http://forum.opennmt.net/t/training-english-german-wmt15-nmt-engine/29">tutorial</a> for training a German-to-English translation system on standard data. 
+
+
+### Are there pretrained translation models that I can try?
+
+There are several different pretrained models available on the <a href="http://opennmt.net//Models/">models</a> page. 
+
+### I am interested in other seq2seq-like problems such as summarization, dialogue, tree-generation. Can OpenNMT work for these?
+
+Yes. OpenNMT is a general-purpose attention-based seq2seq system. There is very little code that is translation specific, and so it should be effective for many of these applications. 
+
+For the case of summarization, OpenNMT has been shown to be more effective than neural systems like NAMAS (https://github.com/facebook/NAMAS), and will be supported going forward. See the <a href="http://opennmt.net//Models/">models</a> page for a pretrained summarization system on the Gigaword dataset. 
+
+### I am interested in variants of seq2seq such as image-to-sequence generation. Can OpenNMT work for these? 
+
+Partially. OpenNMT can be extended with additional Torch neural networks, and a bit of coding. As an example, we have implemented a relatively general-purpose <a href="http://github.com/OpenNMT/im2text">im2text</a> system, with a small amount of additional code. Feel free to use this as a model for extending OpenNMT. 
+
+## Additional Features
+
+### Is the OpenNMT demo server available?
+
+Unfortunately we cannot open-source the demo server. However we are developing a server interface to OpenNMT at https://github.com/OpenNMT/Server/ . Contributions are welcome. 
+
 ## Contributions
 
 ### Can I send a pull request?
