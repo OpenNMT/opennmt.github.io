@@ -123,7 +123,7 @@ There are several different pretrained models available on the <a href="http://o
 
 Try the <a href="http://opus.lingfil.uu.se/">OPUS</a> Project. An open-source collection of parallel corpora. After stripping XML tags, you should be able to use the raw files directly in OpenNMT. 
 
-### I am interested in otherseq2seq-like problems such as summarization, dialogue, tree-generation. Can OpenNMT work for these?
+### I am interested in other seq2seq-like problems such as summarization, dialogue, tree-generation. Can OpenNMT work for these?
 
 Yes. OpenNMT is a general-purpose attention-based seq2seq system. There is very little code that is translation specific, and so it should be effective for many of these applications. 
 
