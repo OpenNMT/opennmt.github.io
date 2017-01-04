@@ -36,7 +36,7 @@ Let's walk through each of these commands in more detail.
 
 ```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
 
-The `preprocess.lua` command can also take additional <a href="https://opennmt.github.io/OpenNMT/Options#preprocess">options</a>.  
+The `preprocess.lua` command can also take additional <a href="http://opennmt.net/OpenNMT/details/preprocess/">options</a>.  
 
 Here we are working with example data in `data/` folder.
 The data consists of a source (`src`) and target (`tgt`) data.
@@ -97,7 +97,7 @@ and a save file.  This will run the default model, which consists of a
 can also add `-gpuid 1` to use (say) GPU 1.
 
 The `train.lua` command can take many additional <a
-href="https://opennmt.github.io/OpenNMT/Options#train">options</a>
+href="http://opennmt.net/OpenNMT/details/train/">options</a>
 describing the desired model size and structure as
 well as the training procedure and initialization.
 
@@ -115,7 +115,7 @@ millions of parallel sentences for [translation](http://www.statmt.org/wmt15/tra
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
 The `evaluate.lua` command can take  more <a
-href="https://opennmt.github.io/OpenNMT/Options#evaluate">options</a>
+href="http://opennmt.net/OpenNMT/details/translate/">options</a>
 describing the beam search procedure.
 
 ## Additional Features
