@@ -19,7 +19,7 @@ OpenNMT consists of three commands:
 
 1) Preprocess the data.
 
-```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -output data/demo```
+```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
 
 2) Train the model.
 
@@ -34,7 +34,7 @@ Let's walk through each of these commands in more detail.
 
 ### Step 1: Preprocess Data
 
-```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -output data/demo```
+```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
 
 The `preprocess.lua` command can also take additional <a href="https://opennmt.github.io/OpenNMT/Options#preprocess">options</a>.  
 
