@@ -241,7 +241,6 @@ Note:
 * `￨` is the feature separator symbol - if such character is used in source text, it is replace by its non presentation form `│`
 * `￭` is the separator mark (generated in `-sep_annotate marker` mode) - if such character is used in source text, it is replace by its non presentation form `■`
 
-#### Detokenization
 
 If you activate `sep_annotate` marker, the tokenization is reversible - just use:
 
