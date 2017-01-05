@@ -23,11 +23,11 @@ OpenNMT consists of three commands:
 
 2) Train the model.
 
-```th train.lua -data data/demo-train.t7 -save_model model```
+```th train.lua -data data/demo-train.t7 -save_model model [-gpuid 1]```
 
 3) Translate sentences.
 
-```th evaluate.lua -model model_final.t7 -src data/src-val.txt -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict```
+```th evaluate.lua -model model_final.t7 -src data/src-val.txt -src_dict data/demo.src.dict -tgt_dict data/demo.tgt.dict [-gpuid 1]```
 
 Let's walk through each of these commands in more detail. 
 
