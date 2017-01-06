@@ -211,8 +211,6 @@ identity replacement.
 ## Tools
 
 
-
-
 ### Tokenization
 
 
@@ -248,7 +246,9 @@ If you activate `sep_annotate` marker, the tokenization is reversible - just use
 th tools/detokenize.lua [-case_feature] < file.tok > file.detok
 ```
 
-### CPU Decoding
+
+
+### CPU Translation
 
 After training a model on the GPU, you may want to release it to run on the CPU with the `release_model.lua` script.
 
@@ -257,6 +257,16 @@ th tools/release_model.lua -model model.t7 -gpuid 1
 ```
 
 By default, it will create a `model_release.t7` file. See `th tools/release_model.lua -h` for advanced options.
+
+### C++ Translator
+
+OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the installation instructions at https://github.com/opennmt/ctranslate.
+
+The C++ version takes the same arguments as `translate.lua`.
+
+```./translate -src -model model_release.t7 -src src-val.txt
+```
+
 
 ### Translation Server
 
