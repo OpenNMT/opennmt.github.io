@@ -23,4 +23,4 @@ Features include:
 * Latest <a href="http://opennmt.net//Guide/#additional-features">research</a> features to improve translation performance.
 * Pretrained <a href="Models">models</a> available for several language pairs.
 * Extensions to allow other sequence generation tasks such as <a href="Models">summarization</a> and <a href="https://github.com/opennmt/im2text">image-to-text</a> generation.
-* Open and active <a href="http://forum.opennmt.net">community</a> welcoming both academic and industrial contributions and requests.
+* Active open <a href="http://forum.opennmt.net">community</a> welcoming both academic and industrial requests and contributions.
