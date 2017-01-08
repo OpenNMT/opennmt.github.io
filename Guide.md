@@ -27,7 +27,7 @@ OpenNMT consists of three commands:
 
 3) Translate sentences.
 
-```th evaluate.lua -model model_final.t7 -src data/src-val.txt [-gpuid 1]```
+```th translate.lua -model model_final.t7 -src data/src-val.txt [-gpuid 1]```
 
 Let's walk through each of these commands in more detail. 
 
