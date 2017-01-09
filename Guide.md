@@ -198,15 +198,6 @@ Note that a GPU core is dedicated to storage of the master copy of the parameter
 for training. Also, to enable convergence at the beginning of the training, only one replica is working for
 the first `async_parallel_minbatch` iterations.
 
-### Deploying Models
-
-It is often important to train models using a GPU, but may be
-necessary to deploy them on a standard CPU system. We provide a script
-`release_model.lua` to convert trained models to work in CPU mode. 
-
-```th release_model.lua -model demo-model_final.t7 -output_model demo-cpu.t7 
-```
-
 ### Translation and Beam Search
 
 By default translation is done using beam search. The `-beam_size`
