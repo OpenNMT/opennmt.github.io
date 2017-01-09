@@ -114,7 +114,7 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-The `evaluate.lua` command can take  more <a
+The `translate.lua` command can take  more <a
 href="http://opennmt.net/OpenNMT/details/translate/">options</a>
 describing the beam search procedure.
 
