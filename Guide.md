@@ -198,6 +198,16 @@ Note that a GPU core is dedicated to storage of the master copy of the parameter
 for training. Also, to enable convergence at the beginning of the training, only one replica is working for
 the first `async_parallel_minbatch` iterations.
 
+To select a subset of the GPUs available on your machine, you should use the `CUDA_VISIBLE_DEVICES` environment variable.
+For example, if you want to use the first and last GPU on a 4-GPU server:
+
+```
+CUDA_VISIBLE_DEVICES=0,3 th train.lua -gpuid 1 -nparallel 2 -data data/demo-train.t7 -save_model demo
+```
+
+Here, GPU 0 will be seen as the first GPU for the process and GPU 3 the second.
+Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
+
 ### Translation and Beam Search
 
 By default translation is done using beam search. The `-beam_size`
