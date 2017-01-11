@@ -116,7 +116,7 @@ Get the full options list on the <a href="http://opennmt.net//Advanced/#translat
 
 ## Tokenization 
 
-Our demo data comes pre-tokenized. If not also provide a simple language-independent tokenizer/detokenizer that we have found to be effective for machine translation. You can run the tokenizer with the following commands:
+Our demo data comes pre-tokenized. If you data is not tokenized, we also provide a simple language-independent tokenizer/detokenizer that we have found to be effective for machine translation tasks. You can run the tokenizer with the following commands:
 
 
 1a) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
