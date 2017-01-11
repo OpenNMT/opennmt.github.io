@@ -219,17 +219,26 @@ greater than 1. For analysis, the translation command also takes an
 oracle/gold `-tgt` file and will output a comparison of scores.
 
 
-### Translating UNK Words 
+### Translating Unknown Words
 
 The default translation mode allows the model to produce the UNK
 symbol when it is not sure of the specific target word. Often times
 UNK symbols will correspond to proper names that can be directly
 transposed between languages. The `-replace_unk` option will
 substitute UNK with a source word using the attention of the
-model. Alternatively, advanced users may prefer to provide a
+model.
+
+Alternatively, advanced users may prefer to provide a
 preconstructed phrase table from an external aligner (such as
-fast_align) using the `-phrase_table` option to allow for non-
-identity replacement.
+fast_align) using the `-phrase_table` option to allow for non-identity replacement.
+
+The phrase table is a file with one translation per line in the format:
+
+```
+source|||target
+```
+
+Where `source` and `target` are case sensitive single tokens.
 
 ## Tools
 
