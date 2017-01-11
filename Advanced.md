@@ -175,7 +175,7 @@ Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
 
 ## Translation
 
-#### Translation - full option list
+### Translation - full option list
 
 #### Data options
 
