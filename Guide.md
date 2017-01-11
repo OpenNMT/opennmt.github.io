@@ -231,6 +231,9 @@ model.
 Alternatively, advanced users may prefer to provide a
 preconstructed phrase table from an external aligner (such as
 fast_align) using the `-phrase_table` option to allow for non-identity replacement.
+Instead of copying the source token with the highest attention, it will
+lookup in the phrase table for a possible translation. If a valid replacement
+is not found then the source token will be copied.
 
 The phrase table is a file with one translation per line in the format:
 
@@ -238,7 +241,7 @@ The phrase table is a file with one translation per line in the format:
 source|||target
 ```
 
-Where `source` and `target` are case sensitive single tokens.
+Where `source` and `target` are **case sensitive** and **single** tokens.
 
 ## Tools
 
