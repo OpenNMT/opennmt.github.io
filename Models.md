@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Models
+title: Models and Recipes
 order: 3
 ---
 
@@ -19,6 +19,12 @@ More models coming soon:
 * Ubuntu Dialogue Dataset
 * Syntactic Parsing
 * Image-to-Text
+
+## Tutorials and Recipes
+
+We provide <a href="http://forum.opennmt.net/c/tutorials">tutorials</a> for training these and other models in our forum.
+
+Additonally, we plan on posting the scripts for each of our <a href="https://github.com/opennmt/recipes">training recipes</a> (coming soon). 
 
 ## Benchmarks
 
