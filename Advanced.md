@@ -31,28 +31,21 @@ Note:
 
 ### Preprocess - full option list
 
-* `-config`:  Read options from this file []                                                                                                                             
-                                                                                                                                                                         
-* `-train_src`:  Path to the training source data []                                                                                                                     
-                                                                                                                                                                         
-* `-train_tgt`:  Path to the training target data []                                                                                                                     
-                                                                                                                                                                         
-* `-valid_src`:  Path to the validation source data []                                                                                                                   
-                                                                                                                                                                         
-* `-valid_tgt`:  Path to the validation target data []                                                                                                                   
-                                                                                                                                                                         
-* `-save_data`:  Output file for the prepared data []                                                                                                                    
-                                                                                                                                                                         
-* `-src_vocab_size`:  Size of the source vocabulary [50000]                                                                                                              
-                                                                                                                                                                         
-* `-tgt_vocab_size`:  Size of the target vocabulary [50000]                                                                                                              
-                                                                                                                                                                         
-* `-src_vocab`:  Path to an existing source vocabulary []                                                                                                                
-                                                                                                                                                                         
-* `-tgt_vocab`:  Path to an existing target vocabulary []                                                                                                                
-                                                                                                                                                                         
-* `-features_vocabs_prefix`:  Path prefix to existing features vocabularies []
-
+* `-config`:  Read options from this file 
+* `-train_src`:  Path to the training source data 
+* `-train_tgt`:  Path to the training target data 
+* `-valid_src`:  Path to the validation source data 
+* `-valid_tgt`:  Path to the validation target data 
+* `-save_data`:  Output file for the prepared data 
+* `-src_vocab_size`:  Size of the source vocabulary [50000]
+* `-tgt_vocab_size`:  Size of the target vocabulary [50000]
+* `-src_vocab`:  Path to an existing source vocabulary 
+* `-tgt_vocab`:  Path to an existing target vocabulary 
+* `-features_vocabs_prefix`:  Path prefix to existing features vocabularies 
+* `-src_seq_length`:  Maximum source sequence length [50]
+* `-tgt_seq_length`:  Maximum target sequence length [50]
+* `-shuffle`:  Shuffle data [1]
+* `-seed`:  Random seed [3435]
 
 
 ### Pre-trained Embeddings
@@ -87,7 +80,59 @@ it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of
 
 ### Train - Full option list
 
+#### Data options
 
+
+* `-data`:  Path to the training *-train.t7 file from preprocess.lua 
+* `-save_model`:  Model filename (the model will be saved as<save_model>_epochN_PPL.t7 where PPL is the validation perplexity []
+* `-train_from`:  If training from a checkpoint then this is the path to the pretrained model. 
+* `-continue`:   If training from a checkpoint, whether to continue the training in the same configuration or not. [false]
+
+#### Model options
+
+* `-layers`:  Number of layers in the LSTM encoder/decoder [2]
+* `-rnn_size`:  Size of LSTM hidden states [500]
+* `-word_vec_size`:  Word embedding sizes [500]
+* `-feat_merge`:  Merge action for the features embeddings: concat or sum [concat]
+* `-feat_vec_exponent`:  When using concatenation, if the feature takes N valuesthen the embedding dimension will be set to N^exponent [0.7]
+* `-feat_vec_size`:  When using sum, the common embedding size of the features [20]
+* `-input_feed`:  Feed the context vector at each time step as additional input (via concatenation with the word embeddings) to the decoder. [1]
+* `-residual`:  Add residual connections between RNN layers. [false]
+* `-brnn`:  Use a bidirectional encoder [false]
+* `brnn_merge`:   Merge action for the bidirectional hidden states: concat or sum [sum]
+
+
+#### Optimization options
+
+* `-max_batch_size`:  Maximum batch size [64]
+* `-epochs`:  Number of training epochs [13]
+* `-start_epoch`:  If loading from a checkpoint, the epoch from which to start [1]
+* `-start_iteration`:  If loading from a checkpoint, the iteration from which to start [1]
+* `-param_init`:  Parameters are initialized over uniform distribution with support (-param_init, param_init) [0.1]
+* `-optim`:  Optimization method. Possible options are: sgd, adagrad, adadelta, adam [sgd]
+* `-learning_rate`:  Starting learning rate. If adagrad/adadelta/adam is used,then this is the global learning rate. Recommended settings are: sgd = 1,adagrad = 0.1, adadelta = 1, adam = 0.0002 [1]
+* `-max_grad_norm`:  If the norm of the gradient vector exceeds this renormalize it to have the norm equal to max_grad_norm [5]
+* `-dropout`:  Dropout probability. Dropout is applied between vertical LSTM stacks. [0.3]
+* `-learning_rate_decay`:  Decay learning rate by this much if (i) perplexity does not decreaseon the validation set or (ii) epoch has gone past the start_decay_at_limit [0.5]
+* `-start_decay_at`:  Start decay after this epoch [9]
+* `-curriculum`:  For this many epochs, order the minibatches based on sourcesequence length. Sometimes setting this to 1 will increase convergence speed. [0]
+* `-pre_word_vecs_enc`:  If a valid path is specified, then this will loadpretrained word embeddings on the encoder side.See README for specific formatting instructions. []
+* `-pre_word_vecs_dec`:  If a valid path is specified, then this will loadpretrained word embeddings on the decoder side.See README for specific formatting instructions. []
+* `-fix_word_vecs_enc`:  Fix word embeddings on the encoder side [false]
+* `fix_word_vecs_dec`:  Fix word embeddings on the decoder side [false]
+
+
+#### Other options
+
+* `-gpuid`:  1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
+* `-nparallel`:  When using GPUs, how many batches to execute in parallel.Note: this will technically change the final batch size to max_batch_size*nparallel. [1]
+* `-async_parallel`:  Use asynchronous parallelism training. [false]
+* `-async_parallel_minbatch`:  For async parallel computing, minimal number of batches before being parallel. [1000]
+* `-no_nccl`:  Disable usage of nccl in parallel mode. [false]
+* `-disable_mem_optimization`:  Disable sharing internal of internal buffers between clones - which is in general safe,except if you want to look inside clones for visualization purpose for instance. [false]
+* `-save_every`:  Save intermediate models every this many iterations within an epoch.If = 0, will not save models within an epoch.  [0]
+* `-report_every`:  Print stats every this many iterations within an epoch. [50]
+* `-seed`:  Seed for random initialization [3435]
 
 ### Training From Snapshots
 
@@ -129,6 +174,32 @@ Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
 
 
 ## Translation
+
+#### Translation - full option list
+
+#### Data options
+
+* `-src`:  Source sequence to decode (one line per sequence) 
+* `-tgt`:  True target sequence (optional) 
+* `-output`:  Path to output the predictions (each line will be the decoded sequence [pred.txt]
+* `-model` :  Path to model .t7 file 
+
+
+#### Beam Search options
+
+
+* `-beam_size`:  Beam size [5]
+* `-batch_size`:  Batch size [30]
+* `-max_sent_length`:  Maximum output sentence length. [250]
+* `-replace_unk`:  Replace the generated UNK tokens with the source token thathad the highest attention weight. If phrase_table is provided,it will lookup the identified source token and give the correspondingtarget token. If it is not provided (or the identified source tokendoes not exist in the table) then it will copy the source token [false]
+* `-phrase_table`:  Path to source-target dictionary to replace UNKtokens. See README.md for the format this file should be in []
+* `-n_best`:  If > 1, it will also output an n_best list of decoded sentences [1]
+* `max_num_unks`:   All sequences with more unks than this will be ignored during beam search [inf]
+
+#### Other options
+
+* `-gpuid`:  1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
+* `-fallback_to_cpu`:  If = true, fallback to CPU if no GPU available [false]
 
 ### Translation and Beam Search
 
