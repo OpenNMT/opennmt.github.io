@@ -15,43 +15,24 @@ Alternatively there is a <a href="https://hub.docker.com/r/harvardnlp/opennmt/">
 
 ## Quickstart
 
-OpenNMT consists in 5 steps:
+OpenNMT consists of three steps. (These steps assume you data is already tokenized. If not see the tokenization section below.)
 
-1) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
 
-```th tools/tokenize.lua -joiner_annotate < file > file.tok```
-
-2) Preprocess the data.
+1) Preprocess the data.
 
 ```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
 
-3) Train the model.
+2) Train the model.
 
 ```th train.lua -data data/demo-train.t7 -save_model model [-gpuid 1]```
 
-4) Translate sentences.
+3) Translate sentences.
 
 ```th translate.lua -model model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]```
 
-5) Detokenize the output.
-
-```th tools/detokenize.lua < file-tgt.tok > file-tgt.detok```
-
 Let's walk through each of these commands in more detail. 
 
-### Step 1: Tokenize Data
-
-```th tools/tokenize.lua -joiner_annotate < file > file.tok```
-
-The tokenize.lua scripts can also handle following options:
-
-* `-mode`: can be `aggressive` or `conservative` (default). In conservative mode, letters, numbers and '_' are kept in sequence, hyphens are accepted as part of tokens. Finally inner characters `[.,]` are also accepted (url, numbers).
-* `-case_feature`: generate case feature - and convert all tokens to lowercase
-
-Get the full options list in Advanced features.
-
-
-### Step 2: Preprocess Data
+### Step 1: Preprocess Data
 
 ```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
 
@@ -60,7 +41,7 @@ The data consists of a source (`src`) and target (`tgt`) data.
 This will take the source/target train/valid files (`src-train.txt, tgt-train.txt,
 src-val.txt, tgt-val.txt`). 
 
-Get the full options list in Advanced features.
+Get the full options list on the features page.
 
 * data/tgt-train.txt
 
@@ -105,7 +86,7 @@ with 11
 
 Internally the system never touches the words themselves, but uses these indices.
 
-### Step 3: Train the model
+### Step 2: Train the model
 
 ```th train.lua -data data/demo-train.t7 -save_model demo-model
 ```
@@ -115,10 +96,10 @@ and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
 can also add `-gpuid 1` to use (say) GPU 1.
 
-Get the full options list in Advanced features.
+Get the full options list on the features page.
 
 
-### Step 4: Translate
+### Step 3: Translate
 
 ```th translate.lua -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]
 ```
@@ -130,11 +111,25 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-Get the full options list in Advanced features.
-
-### Step 5: Detokenize the output
-
-```th tools/detokenize.lua < file-tgt.tok > file.detok```
+Get the full options list on the features page.
 
 
-  
+## Tokenization 
+
+Our demo data comes pre-tokenized. If not also provide a simple language-independent tokenizer/detokenizer that we have found to be effective for machine translation. You can run the tokenizer with the following commands:
+
+
+1a) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
+
+```th tools/tokenize.lua -joiner_annotate < file > file.tok```
+
+The tokenize.lua scripts can also handle following options:
+
+* `-mode`: can be `aggressive` or `conservative` (default). In conservative mode, letters, numbers and '_' are kept in sequence, hyphens are accepted as part of tokens. Finally inner characters `[.,]` are also accepted (url, numbers).
+* `-case_feature`: generate case feature - and convert all tokens to lowercase
+
+Get the full options list on the features page.
+
+3b) Detokenize the output.
+
+```th tools/detokenize.lua < file-tgt.tok > file-tgt.detok```
