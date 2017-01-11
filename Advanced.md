@@ -29,6 +29,55 @@ Note:
 * `￨` is the feature separator symbol - if such character is used in source text, it is replace by its non presentation form `│`
 * `￭` is the default joiner marker (generated in `-joiner_annotate` mode) - if such character is used in source text, it is replace by its non presentation form `■`
 
+### Preprocess - full option list
+
+
+config
+:   Read options from this file []
+
+train_src
+:   Path to the training source data []
+
+train_tgt
+:   Path to the training target data []
+
+valid_src
+:   Path to the validation source data []
+
+valid_tgt
+:   Path to the validation target data []
+
+save_data
+:   Output file for the prepared data []
+
+src_vocab_size
+:   Size of the source vocabulary [50000]
+
+tgt_vocab_size
+:   Size of the target vocabulary [50000]
+
+src_vocab
+:   Path to an existing source vocabulary []
+
+tgt_vocab
+:   Path to an existing target vocabulary []
+
+features_vocabs_prefix
+:   Path prefix to existing features vocabularies []
+
+src_seq_length
+:   Maximum source sequence length [50]
+
+tgt_seq_length
+:   Maximum target sequence length [50]
+
+shuffle
+:   Shuffle data [1]
+
+seed
+:   Random seed [3435]
+
+
 
 ### Pre-trained Embeddings
 
@@ -62,35 +111,7 @@ it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of
 
 ### Train - Full option list
 
-```
-**Data options**
 
-  -src             Source sequence to decode (one line per sequence) []
-  -tgt             True target sequence (optional) []
-  -output          Path to output the predictions (each line will be the decoded sequence [pred.txt]
-  -model           Path to model .t7 file []
-
-**Beam Search options**
-
-  -beam_size       Beam size [5]
-  -batch_size      Batch size [30]
-  -max_sent_length Maximum output sentence length. [250]
-  -replace_unk     Replace the generated UNK tokens with the source token that
-                              had the highest attention weight. If phrase_table is provided,
-                              it will lookup the identified source token and give the corresponding
-                              target token. If it is not provided (or the identified source token
-                              does not exist in the table) then it will copy the source token [false]
-  -phrase_table    Path to source-target dictionary to replace UNK
-                                     tokens. See README.md for the format this file should be in []
-  -n_best          If > 1, it will also output an n_best list of decoded sentences [1]
-  -max_num_unks    All sequences with more unks than this will be ignored during beam search [inf]
-
-**Other options**
-
-  -gpuid           1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
-  -fallback_to_cpu If = true, fallback to CPU if no GPU available [false]
-  -time            Measure batch translation time [false]
-```
 
 ### Training From Snapshots
 
