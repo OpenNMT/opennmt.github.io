@@ -60,6 +60,37 @@ it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of
 
 ## Training
 
+### Train - Full option list
+
+```
+**Data options**
+
+  -src             Source sequence to decode (one line per sequence) []
+  -tgt             True target sequence (optional) []
+  -output          Path to output the predictions (each line will be the decoded sequence [pred.txt]
+  -model           Path to model .t7 file []
+
+**Beam Search options**
+
+  -beam_size       Beam size [5]
+  -batch_size      Batch size [30]
+  -max_sent_length Maximum output sentence length. [250]
+  -replace_unk     Replace the generated UNK tokens with the source token that
+                              had the highest attention weight. If phrase_table is provided,
+                              it will lookup the identified source token and give the corresponding
+                              target token. If it is not provided (or the identified source token
+                              does not exist in the table) then it will copy the source token [false]
+  -phrase_table    Path to source-target dictionary to replace UNK
+                                     tokens. See README.md for the format this file should be in []
+  -n_best          If > 1, it will also output an n_best list of decoded sentences [1]
+  -max_num_unks    All sequences with more unks than this will be ignored during beam search [inf]
+
+**Other options**
+
+  -gpuid           1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
+  -fallback_to_cpu If = true, fallback to CPU if no GPU available [false]
+  -time            Measure batch translation time [false]
+```
 
 ### Training From Snapshots
 
