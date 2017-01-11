@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Advanced features
+title: Features
 order: 6
 ---
 
@@ -8,7 +8,7 @@ order: 6
 {:toc}
 
 
-#### Advanced features for Data preparation
+## Data Preparation
 
 ### Tokenizer - full option list
 
@@ -58,7 +58,7 @@ As an example, consider the data in `data/src-train-case.txt` which uses a separ
 it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of￨l the￨l national￨l bureaucracies￨l ,￨n parliament￨C &apos;s￨l legislative￨l prerogative￨l should￨l be￨l made￨l null￨l and￨l void￨l by￨l means￨l of￨l implementing￨l provisions￨l whose￨l content￨l ,￨n purpose￨l and￨l extent￨l are￨l not￨l laid￨l down￨l in￨l advance￨l .￨n
 ```
 
-#### Advanced features for training
+## Training
 
 
 ### Training From Snapshots
@@ -72,7 +72,7 @@ the starting snapshot. By default the system will train starting from
 parameter using newly passed in options. To override this, and 
 continue from the previous location use the `-continue` option.
 
-### Parallel training
+### Parallel Training
 
 To accelerate training, you can use *data parallelism* for the training.
 Data parallelism is the possibility to use several GPUs for training with parallel
@@ -100,7 +100,7 @@ Here, GPU 0 will be seen as the first GPU for the process and GPU 3 the second.
 Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
 
 
-#### Advanced features - Decoding
+## Translation
 
 ### Translation and Beam Search
 
@@ -195,7 +195,7 @@ print sock.recv()
 For a longer example, see our <a href="http://github.com/OpenNMT/Server/">Python/Flask server</a> in development. 
 
 
-#### Advanced features - Extending the System (Image-to-Text)
+##  Extending the System (Image-to-Text)
 
 OpenNMT is explicitly separated out into a library and application 
 section. All modeling and training code can be directly used within
