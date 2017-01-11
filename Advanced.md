@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Features
-order: 6
+order: 2.5
 ---
 
 * TOC
