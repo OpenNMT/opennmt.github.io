@@ -31,51 +31,27 @@ Note:
 
 ### Preprocess - full option list
 
-
-config
-:   Read options from this file []
-
-train_src
-:   Path to the training source data []
-
-train_tgt
-:   Path to the training target data []
-
-valid_src
-:   Path to the validation source data []
-
-valid_tgt
-:   Path to the validation target data []
-
-save_data
-:   Output file for the prepared data []
-
-src_vocab_size
-:   Size of the source vocabulary [50000]
-
-tgt_vocab_size
-:   Size of the target vocabulary [50000]
-
-src_vocab
-:   Path to an existing source vocabulary []
-
-tgt_vocab
-:   Path to an existing target vocabulary []
-
-features_vocabs_prefix
-:   Path prefix to existing features vocabularies []
-
-src_seq_length
-:   Maximum source sequence length [50]
-
-tgt_seq_length
-:   Maximum target sequence length [50]
-
-shuffle
-:   Shuffle data [1]
-
-seed
-:   Random seed [3435]
+* `-config`:  Read options from this file []                                                                                                                             
+                                                                                                                                                                         
+* `-train_src`:  Path to the training source data []                                                                                                                     
+                                                                                                                                                                         
+* `-train_tgt`:  Path to the training target data []                                                                                                                     
+                                                                                                                                                                         
+* `-valid_src`:  Path to the validation source data []                                                                                                                   
+                                                                                                                                                                         
+* `-valid_tgt`:  Path to the validation target data []                                                                                                                   
+                                                                                                                                                                         
+* `-save_data`:  Output file for the prepared data []                                                                                                                    
+                                                                                                                                                                         
+* `-src_vocab_size`:  Size of the source vocabulary [50000]                                                                                                              
+                                                                                                                                                                         
+* `-tgt_vocab_size`:  Size of the target vocabulary [50000]                                                                                                              
+                                                                                                                                                                         
+* `-src_vocab`:  Path to an existing source vocabulary []                                                                                                                
+                                                                                                                                                                         
+* `-tgt_vocab`:  Path to an existing target vocabulary []                                                                                                                
+                                                                                                                                                                         
+* `-features_vocabs_prefix`:  Path prefix to existing features vocabularies []
 
 
 
