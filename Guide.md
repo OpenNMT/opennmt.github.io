@@ -41,7 +41,7 @@ The data consists of a source (`src`) and target (`tgt`) data.
 This will take the source/target train/valid files (`src-train.txt, tgt-train.txt,
 src-val.txt, tgt-val.txt`). 
 
-Get the full options list on the features page.
+Get the full options list on the <a href="http://opennmt.net//Advanced/#preprocess---full-option-list">features page</a>.
 
 * data/tgt-train.txt
 
@@ -96,7 +96,7 @@ and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
 can also add `-gpuid 1` to use (say) GPU 1.
 
-Get the full options list on the features page.
+Get the full options list on the <a href="http://opennmt.net//Advanced/#train---full-option-list">features page</a>.
 
 
 ### Step 3: Translate
@@ -111,7 +111,7 @@ as the demo dataset is small. Try running on some larger datasets! For example y
 millions of parallel sentences for [translation](http://www.statmt.org/wmt15/translation-task.html)
 or [summarization](https://github.com/harvardnlp/sent-summary).
 
-Get the full options list on the features page.
+Get the full options list on the <a href="http://opennmt.net//Advanced/#translation---full-option-list">features page</a>.
 
 
 ## Tokenization 
@@ -128,7 +128,7 @@ The tokenize.lua scripts can also handle following options:
 * `-mode`: can be `aggressive` or `conservative` (default). In conservative mode, letters, numbers and '_' are kept in sequence, hyphens are accepted as part of tokens. Finally inner characters `[.,]` are also accepted (url, numbers).
 * `-case_feature`: generate case feature - and convert all tokens to lowercase
 
-Get the full options list on the features page.
+Get the full options list on the <a href="http://opennmt.net//Advanced/#tokenizer---full-option-list">features page</a>.
 
 3b) Detokenize the output.
 
