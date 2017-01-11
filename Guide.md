@@ -260,7 +260,9 @@ This additionally requires `bit32` for Lua < 5.2
 where the options are:
 
 * `-mode`: can be `aggressive` or `conservative` (default). In conservative mode, letters, numbers and '_' are kept in sequence, hyphens are accepted as part of tokens. Finally inner characters `[.,]` are also accepted (url, numbers).
-* `-sep_annotate`: if set, add reversible separator mark to indicate separator-less or BPE tokenization (preference on symbol, then number, then letter)
+* `-joiner_annotate`: if set, add joiner marker to indicate separator-less or BPE tokenization. The marker is defined by `-joiner` option and by default is joined to tokens (preference on symbol, then number, then letter) but can be independent if `-joiner_new` option is set.
+* `-joiner`: default (￭) - the joiner marker
+* `-joiner_new`: if set, the joiner is an independent token
 * `-case_feature`: generate case feature - and convert all tokens to lowercase
   * `N`: not defined (for instance tokens without case)
   * `L`: token is lowercased (opennmt)
@@ -272,13 +274,13 @@ where the options are:
 Note:
 
 * `￨` is the feature separator symbol - if such character is used in source text, it is replace by its non presentation form `│`
-* `￭` is the separator mark (generated in `-sep_annotate marker` mode) - if such character is used in source text, it is replace by its non presentation form `■`
+* `￭` is the default joiner marker (generated in `-joiner_annotate` mode) - if such character is used in source text, it is replace by its non presentation form `■`
 
 
-If you activate `sep_annotate` marker, the tokenization is reversible - just use:
+If you activate `joiner_annotate` marker, the tokenization is reversible - just use:
 
 ```
-th tools/detokenize.lua [-case_feature] < file.tok > file.detok
+th tools/detokenize.lua [-case_feature] [-joiner] < file.tok > file.detok
 ```
 
 
