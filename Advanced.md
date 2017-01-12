@@ -64,8 +64,8 @@ training, but they can be held fixed using `-fix_word_vecs_enc` and
 OpenNMT supports additional features on source and target words in the form of discrete labels.
 
 * On the source side, these features act as additional information to the encoder. An
-embedding will be optimized for each label and then fed as additional input to the
-encoder alongside the word it annotates.
+embedding will be optimized for each label and then fed as additional source input
+alongside the word it annotates.
 * On the target side, these features will be predicted by the network. The
 decoder is then able to decode a sentence and annotate each words.
 
@@ -76,7 +76,7 @@ features and in the same order. Source and target data can have a different numb
 
 As an example, see `data/src-train-case.txt` which uses a separate feature
 to represent the case of each word. Using case as a feature is a way to optimize the word
-dictionaries (no duplicated words like "the" and "The") and gives the system an additional
+dictionary (no duplicated words like "the" and "The") and gives the system an additional
 information that can be useful to optimize its objective function.
 
 ```
