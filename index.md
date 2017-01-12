@@ -1,6 +1,6 @@
 ---
 layout: page
-title: OpenNMT: Open-Source Neural Machine Translation
+title: Home
 order: 1
 ---
 
