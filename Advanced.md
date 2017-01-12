@@ -83,6 +83,8 @@ information that can be useful to optimize its objective function.
 it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of￨l the￨l national￨l bureaucracies￨l ,￨n parliament￨C &apos;s￨l legislative￨l prerogative￨l should￨l be￨l made￨l null￨l and￨l void￨l by￨l means￨l of￨l implementing￨l provisions￨l whose￨l content￨l ,￨n purpose￨l and￨l extent￨l are￨l not￨l laid￨l down￨l in￨l advance￨l .￨n
 ```
 
+You can generate this case feature with OpenNMT's tokenization script and the `-case_feature` flag.
+
 ## Training
 
 ### Train - Full option list
