@@ -61,20 +61,29 @@ training, but they can be held fixed using `-fix_word_vecs_enc` and
 
 ### Word Features
 
-OpenNMT supports including additional features on source and target
-words.  These features are are given their embeddings which are
-concatenated (or summed depending on `-feat_merge` argument) upon input, and generated (independently) on
-the decoder side. To specify features, simply modify the training data
-before the preprocessing step, replacing `word` with
-`words￨feat1￨feat2...` using the special symbol `￨` (unicode character FFE8).
+OpenNMT supports additional features on source and target words in the form of discrete labels.
 
-As an example, consider the data in `data/src-train-case.txt` which uses a separate features to represent the case of each word. 
+* On the source side, these features act as additional information to the encoder. An
+embedding will be optimized for each label and then fed as additional source input
+alongside the word it annotates.
+* On the target side, these features will be predicted by the network. The
+decoder is then able to decode a sentence and annotate each word.
 
-* data/src-train-case.txt
+To use additional features, directly modify your data by appending labels to each word with
+the special character `￨` (unicode character FFE8). There can be an arbitrary number of additional
+features in the form `word￨feat1￨feat2￨...￨featN` but each word must have the same number of
+features and in the same order. Source and target data can have a different number of additional features.
+
+As an example, see `data/src-train-case.txt` which uses a separate feature
+to represent the case of each word. Using case as a feature is a way to optimize the word
+dictionary (no duplicated words like "the" and "The") and gives the system an additional
+information that can be useful to optimize its objective function.
 
 ```
 it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of￨l the￨l national￨l bureaucracies￨l ,￨n parliament￨C &apos;s￨l legislative￨l prerogative￨l should￨l be￨l made￨l null￨l and￨l void￨l by￨l means￨l of￨l implementing￨l provisions￨l whose￨l content￨l ,￨n purpose￨l and￨l extent￨l are￨l not￨l laid￨l down￨l in￨l advance￨l .￨n
 ```
+
+You can generate this case feature with OpenNMT's tokenization script and the `-case_feature` flag.
 
 ## Training
 
@@ -249,11 +258,11 @@ By default, it will create a `model_release.t7` file. See `th tools/release_mode
 
 ### C++ Translator
 
-OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the installation instructions at https://github.com/opennmt/ctranslate.
+OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the [installation instructions](https://github.com/opennmt/ctranslate).
 
 The C++ version takes the same arguments as `translate.lua`.
 
-```./translate -src -model model_release.t7 -src src-val.txt
+```cli/translate --model model_release.t7 --src src-val.txt
 ```
 
 ### Translation Server
