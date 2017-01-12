@@ -19,13 +19,13 @@ Major source contributions and support come from <a href="http://www.systransoft
 
 ## Technical Report 
 
-A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is available. If you use the system for academic work, please cite.
+A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is available. If you use the system for academic work, please cite:
 
     @ARTICLE{2017opennmt,
-    author = { {Klein}, G. and {Kim}, Y. and {Deng}, Y. and {Senellart}, J. and {Rush}, A.~M.},
-    title = "{OpenNMT: Open-Source Toolkit for Neural Machine Translation}",
-    journal = {ArXiv e-prints},
-    eprint = {1701.02810} }
+             author = { {Klein}, G. and {Kim}, Y. and {Deng}, Y. and {Senellart}, J. and {Rush}, A.~M.},
+             title = "{OpenNMT: Open-Source Toolkit for Neural Machine Translation}",
+             journal = {ArXiv e-prints},
+             eprint = {1701.02810} }
 
     
 ## Research
