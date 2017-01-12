@@ -67,7 +67,7 @@ OpenNMT supports additional features on source and target words in the form of d
 embedding will be optimized for each label and then fed as additional source input
 alongside the word it annotates.
 * On the target side, these features will be predicted by the network. The
-decoder is then able to decode a sentence and annotate each words.
+decoder is then able to decode a sentence and annotate each word.
 
 To use additional features, directly modify your data by appending labels to each word with
 the special character `￨` (unicode character FFE8). There can be an arbitrary number of additional
