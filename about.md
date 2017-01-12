@@ -23,7 +23,7 @@ A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is 
 
     @ARTICLE{2017opennmt,
              author = { {Klein}, G. and {Kim}, Y. and {Deng}, Y. 
-                     and {Senellart}, J. and {Rush}, A.~M.},
+                        and {Senellart}, J. and {Rush}, A.~M.},
              title = "{OpenNMT: Open-Source Toolkit 
                        for Neural Machine Translation}",
              journal = {ArXiv e-prints},
