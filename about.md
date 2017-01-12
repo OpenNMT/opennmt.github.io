@@ -19,7 +19,7 @@ Major source contributions and support come from <a href="http://www.systransoft
 
 ## Technical Report 
 
-A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is available. If you use the system for academic work, please cite this report
+A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is available. If you use the system for academic work, please cite.
 
     @ARTICLE{2017opennmt,
     author = {{Klein}, G. and {Kim}, Y. and {Deng}, Y. and {Senellart}, J. and {Rush}, A.~M.},
@@ -48,6 +48,7 @@ Zhou et al, TACL 2016.
 * [Guided Alignment Training for Topic-Aware Neural Machine Translation](https://arxiv.org/pdf/1607.01628). Chen et al., arXiv:1607.01628.
 * [Linguistic Input Features Improve Neural Machine Translation](https://arxiv.org/pdf/1606.02892). Senrich et al., arXiv:1606.02892
 * [Neural Machine Translation of Rare Words with Subword Units](https://www.aclweb.org/anthology/P/P16/P16-1162.pdf). Senrich et al., ACL 2016.
+
 
 ## Acknowledgments
 
