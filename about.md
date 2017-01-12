@@ -17,6 +17,17 @@ Major source contributions and support come from <a href="http://www.systransoft
 <img style="margin:40px" width="200px" src="http://www.systransoft.com/wp-content/themes/systran/img/common/logo.png" />
 </center>
 
+## Technical Report 
+
+A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is available. If you use the system for academic work, please cite this report
+
+    @ARTICLE{2017opennmt,
+    author = {{Klein}, G. and {Kim}, Y. and {Deng}, Y. and {Senellart}, J. and {Rush}, A.~M.},
+    title = "{OpenNMT: Open-Source Toolkit for Neural Machine Translation}",
+    journal = {ArXiv e-prints},
+    eprint = {1701.02810}}
+
+    
 ## Research
 
 The main model is based on the papers [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) Bahdanau et al. ICLR 2015 and
