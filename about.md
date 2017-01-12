@@ -30,14 +30,13 @@ A <a href="https://arxiv.org/abs/1701.02810">technical report</a> on OpenNMT is 
     
 ## Research
 
-The main model is based on the papers [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) Bahdanau et al. ICLR 2015 and
-[Effective Approaches to Attention-based
-Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf),
-Luong et al. EMNLP 2015.
+The main model is based on the papers:
+
+* [Neural Machine Translation by Jointly Learning to Align and Translate](https://arxiv.org/abs/1409.0473) Bahdanau et al. ICLR 2015 
+* [Effective Approaches to Attention-based Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf), Luong et al. EMNLP 2015.
 
 
-There are a lot of additional options on top of the baseline model, mainly thanks to the fantastic folks
-at [SYSTRAN](http://www.systransoft.com). Specifically, there are functionalities which implement:
+There are a lot of additional options on top of the baseline model. Specifically, there are functionalities which implement:
 
 * [Effective Approaches to Attention-based Neural Machine Translation](http://stanford.edu/~lmthang/data/papers/emnlp15_attn.pdf). Luong et al., EMNLP 2015.
 * [Character-based Neural Machine Translation](https://aclweb.org/anthology/P/P16/P16-2058.pdf). Costa-Jussa and Fonollosa, ACL 2016.
