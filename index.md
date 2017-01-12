@@ -1,11 +1,8 @@
 ---
 layout: page
-title: Home
+title: OpenNMT: Open-Source Neural Machine Translation
 order: 1
 ---
-
-# OpenNMT
-
 
 <a href="https://opennmt.github.io/">OpenNMT</a> is a industrial-strength,
 open-source (MIT) neural machine translation system utilizing the
