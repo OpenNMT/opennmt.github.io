@@ -1,0 +1,9 @@
+#select-language ul {
+    list-style-type: none;
+}
+#select-language ul li {
+    display: inline-block;
+}
+#select-language ul li+li {
+    margin-left: 10px;
+}
