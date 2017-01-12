@@ -249,11 +249,11 @@ By default, it will create a `model_release.t7` file. See `th tools/release_mode
 
 ### C++ Translator
 
-OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the installation instructions at https://github.com/opennmt/ctranslate.
+OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the [installation instructions](https://github.com/opennmt/ctranslate).
 
 The C++ version takes the same arguments as `translate.lua`.
 
-```./translate -src -model model_release.t7 -src src-val.txt
+```cli/translate --model model_release.t7 --src src-val.txt
 ```
 
 ### Translation Server
