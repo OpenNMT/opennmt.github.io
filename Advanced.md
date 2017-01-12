@@ -208,7 +208,6 @@ Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
 #### Other options
 
 * `-gpuid`:  1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
-* `-fallback_to_cpu`:  If = true, fallback to CPU if no GPU available [false]
 
 ### Translation and Beam Search
 
