@@ -14,7 +14,7 @@ OpenNMT was originally developed by <a href="http://yoon.io">Yoon Kim</a> and <a
 Major source contributions and support come from <a href="http://www.systransoft.com/">SYSTRAN</a>.
 
 <center>
-<img style="margin:40px" width="200px" src="//static.systran.net/systran-logo-portrait.svg" />
+<img style="margin:40px" width="200px" src="://static.systran.net/systran-logo-portrait.svg" />
 </center>
 
 ## Technical Report 
