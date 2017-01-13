@@ -42,5 +42,21 @@
 
 .container.sidebar-sticky > p {
     font-size: 0.7rem;
-    padding-top: 2rem;
+    padding: 2rem 0;
+}
+
+
+
+
+/* small devices */
+@media (min-width: 48em) {
+    .lead {
+        line-height: 1.2rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .sidebar-about h1 {
+        margin: 0 auto;
+    }
 }
