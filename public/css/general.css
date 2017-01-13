@@ -1,3 +1,4 @@
+/* Language top bar */
 #select-language {
     margin-top: 10px;
 }
@@ -9,5 +10,53 @@
     display: inline-block;
 }
 #select-language ul li+li {
-    margin-left: 10px;
+    margin-left: 20px;
+}
+
+/* Sidebar customization */
+.sidebar {
+    padding: 0 1rem;
+}
+
+.sidebar-about h1 {
+    display: block;
+    margin: 0 0 -1rem -0.5rem;
+    width:200px
+}
+
+.sidebar-about h1 center a img {
+    margin: 0;
+    border-radius: 0;
+    width: auto;
+}
+
+.lead {
+    font-size: 1.1rem;
+    line-height: 1.1rem;
+    padding: 1rem 0 1rem 0;
+}
+
+
+
+
+
+.container.sidebar-sticky > p {
+    font-size: 0.7rem;
+    padding: 2rem 0;
+}
+
+
+
+
+/* small devices */
+@media (min-width: 48em) {
+    .lead {
+        line-height: 1.2rem;
+    }
+}
+
+@media (max-width: 48em) {
+    .sidebar-about h1 {
+        margin: 0 auto;
+    }
 }
