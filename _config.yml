@@ -10,8 +10,8 @@ permalink:        pretty
 title:            'OpenNMT'
 tagline:          'NMT'
 description:      'An open-source neural machine translation system.'
-url:              http://opennmt.net
-baseurl:          http://opennmt.net
+url:              http://5h4r0.github.io
+baseurl:          http://5h4r0.github.io
 google_analytics: UA-89222039-1
 author:
   name:           'Yoon Kim and HarvardNLP'
