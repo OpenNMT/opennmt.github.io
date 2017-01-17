@@ -20,7 +20,7 @@
 
 .sidebar-about h1 {
     display: block;
-    margin: 0 0 -1rem -0.5rem;
+    margin: 0 auto -1rem auto;
     width:200px
 }
 
@@ -34,6 +34,7 @@
     font-size: 1.1rem;
     line-height: 1.1rem;
     padding: 1rem 0 1rem 0;
+    text-align: center;
 }
 
 
