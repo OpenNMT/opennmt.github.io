@@ -12,7 +12,7 @@ OpenNMT was originally developed by <a href="http://yoon.io">Yoon Kim</a> and <a
 
 Major source contributions and support come from <a href="http://www.systrangroup.com/" title="SYSTRAN - PURE NEURAL MACHINE TRANSLATION - ARTIFICIAL INTELLIGENCE AND DEEP LEARNING">SYSTRAN</a>.
 
-<a href="http://www.systrangroup.com/"><img style="margin: 50px auto;" width="200px" src="http://static.systran.net/systran-logo-portrait.svg" alt="SYSTRAN - PURE NEURAL MACHINE TRANSLATION - ARTIFICIAL INTELLIGENCE AND DEEP LEARNING" /></a>
+<a href="http://www.systrangroup.com/"><img style="margin: 50px auto;" width="200px" src="http://static.systran.net/systran-logo-portrait.png" alt="SYSTRAN - PURE NEURAL MACHINE TRANSLATION - ARTIFICIAL INTELLIGENCE AND DEEP LEARNING" /></a>
 </center>
 
 ## Technical Report 

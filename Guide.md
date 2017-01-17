@@ -119,17 +119,21 @@ Get the full options list on the <a href="http://opennmt.net//Advanced/#translat
 Our demo data comes pre-tokenized. If you data is not tokenized, we also provide a simple language-independent tokenizer/detokenizer that we have found to be effective for machine translation tasks. You can run the tokenizer with the following commands:
 
 
-1a) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
+1) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
 
 ```th tools/tokenize.lua -joiner_annotate < file > file.tok```
 
-The tokenize.lua scripts can also handle following options:
+The `tokenize.lua` script can also handle following options:
 
 * `-mode`: can be `aggressive` or `conservative` (default). In conservative mode, letters, numbers and '_' are kept in sequence, hyphens are accepted as part of tokens. Finally inner characters `[.,]` are also accepted (url, numbers).
 * `-case_feature`: generate case feature - and convert all tokens to lowercase
 
 Get the full options list on the <a href="http://opennmt.net//Advanced/#tokenizer---full-option-list">features page</a>.
 
-3b) Detokenize the output.
+2) Detokenize the output.
 
 ```th tools/detokenize.lua < file-tgt.tok > file-tgt.detok```
+
+The `detokenize.lua` script can also handle following options:
+
+* `-case_feature`: indicating that the first feature is a case feature - restore the cases on the tokens
