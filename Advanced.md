@@ -23,7 +23,6 @@ order: 2.5
   * `C`: token is capitalized (Opennmt)
   * `M`: token case is mixed (OpenNMT)
 * `-bpe_model`: Apply Byte Pair Encoding if the BPE model path is given
-* `-nparallel`: Number of parallel thread to run the tokenization
 * `-batchsize`: Size of each parallel batch - you should not change except if low memory
 
 Note:
@@ -135,8 +134,7 @@ You can generate this case feature with OpenNMT's tokenization script and the `-
 
 #### Other options
 
-* `-gpuid`:  1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
-* `-nparallel`:  When using GPUs, how many batches to execute in parallel.Note: this will technically change the final batch size to max_batch_size*nparallel. [1]
+* `-gpuid`:  List of comma-separated GPU identifiers (1-indexed). CPU is used when set to 0. [0]
 * `-async_parallel`:  Use asynchronous parallelism training. [false]
 * `-async_parallel_minbatch`:  For async parallel computing, minimal number of batches before being parallel. [1000]
 * `-no_nccl`:  Disable usage of nccl in parallel mode. [false]
@@ -158,30 +156,20 @@ continue from the previous location use the `-continue` option.
 
 ### Parallel Training
 
-To accelerate training, you can use *data parallelism* for the training.
-Data parallelism is the possibility to use several GPUs for training with parallel
-batches on different *replicas*. To enable this option use `-nparallel` option which requires
-availability of as many GPU cores. There are 2 different modes:
+OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
 
-* synchronous parallelism: in this mode (default), each replica process in parallel a different batch
-at each iteration. The gradients from each replica are accumulated, and parameters
-updated and synchronized.
-* asynchronous parallelism: in this mode (activated with `-async_parallel`, the different replicas are independently
+```
+th train.lua -data data/demo-train.t7 -save_model demo -gpuid 1,2,4
+```
+
+will use the first, the second and the fourth GPU of the machine.
+
+There are 2 different modes:
+
+* **synchronous parallelism** (default): in this mode, each replica processes in parallel a different batch at each iteration. The gradients from each replica are accumulated, and parameters updated and synchronized.
+* **asynchronous parallelism** (`-async_parallel` flag): in this mode, the different replicas are independently
 calculating their own gradient, updating a master copy of the parameters and getting updated values
-of the parameters.
-Note that a GPU core is dedicated to storage of the master copy of the parameters and is not used
-for training. Also, to enable convergence at the beginning of the training, only one replica is working for
-the first `async_parallel_minbatch` iterations.
-
-To select a subset of the GPUs available on your machine, you should use the `CUDA_VISIBLE_DEVICES` environment variable.
-For example, if you want to use the first and last GPU on a 4-GPU server:
-
-```
-CUDA_VISIBLE_DEVICES=0,3 th train.lua -gpuid 1 -nparallel 2 -data data/demo-train.t7 -save_model demo
-```
-
-Here, GPU 0 will be seen as the first GPU for the process and GPU 3 the second.
-Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
+of the parameters. Note that a GPU core is dedicated to storage of the master copy of the parameters and is not used for training. Also, to enable convergence at the beginning of the training, only one replica is working for the first `-async_parallel_minbatch` iterations.
 
 
 ## Translation
@@ -209,7 +197,7 @@ Note that `CUDA_VISIBLE_DEVICES` is 0-indexed while `-gpuid` is 1-indexed.
 
 #### Other options
 
-* `-gpuid`:  1-based identifier of the GPU to use. CPU is used when the option is < 1 [0]
+* `-gpuid`:  List of comma-separated GPU identifiers (1-indexed). CPU is used when set to 0. [0]
 
 ### Translation and Beam Search
 
