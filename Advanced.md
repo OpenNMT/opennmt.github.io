@@ -23,6 +23,7 @@ order: 2.5
   * `C`: token is capitalized (Opennmt)
   * `M`: token case is mixed (OpenNMT)
 * `-bpe_model`: Apply Byte Pair Encoding if the BPE model path is given
+* `-nparallel`: Number of parallel thread to run the tokenization
 * `-batchsize`: Size of each parallel batch - you should not change except if low memory
 
 Note:
