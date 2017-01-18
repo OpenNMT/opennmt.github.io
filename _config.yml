@@ -8,7 +8,7 @@ permalink:        pretty
 
 # Setup
 title:            'OpenNMT'
-tagline:          'NMT'
+tagline:          'Open-Source Neural Machine Translation'
 description:      'An open-source neural machine translation system.'
 url:              http://opennmt.net
 baseurl:          http://opennmt.net
