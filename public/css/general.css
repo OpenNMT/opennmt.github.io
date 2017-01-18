@@ -1,6 +1,8 @@
 /* Language top bar */
 #select-language {
-    margin-top: 10px;
+    margin-top: 20px;
+    font-size: 0.8em;
+    color: white;
 }
 #select-language ul {
     list-style-type: none;
@@ -10,7 +12,7 @@
     display: inline-block;
 }
 #select-language ul li+li {
-    margin-left: 20px;
+    margin-left: 15px;
 }
 
 /* Sidebar customization */
