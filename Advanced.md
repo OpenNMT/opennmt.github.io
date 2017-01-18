@@ -155,7 +155,7 @@ the starting snapshot. By default the system will train starting from
 parameter using newly passed in options. To override this, and 
 continue from the previous location use the `-continue` option.
 
-### Parallel Training
+### Multi-GPU Training
 
 OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
 
