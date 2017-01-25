@@ -103,6 +103,7 @@ You can generate this case feature with OpenNMT's tokenization script and the `-
 
 * `-layers`:  Number of layers in the LSTM encoder/decoder [2]
 * `-rnn_size`:  Size of LSTM hidden states [500]
+* `-rnn_type`: Type of RNN cell: LSTM, GRU [LSTM]
 * `-word_vec_size`:  Word embedding sizes [500]
 * `-feat_merge`:  Merge action for the features embeddings: concat or sum [concat]
 * `-feat_vec_exponent`:  When using concatenation, if the feature takes N valuesthen the embedding dimension will be set to N^exponent [0.7]
@@ -143,6 +144,11 @@ You can generate this case feature with OpenNMT's tokenization script and the `-
 * `-save_every`:  Save intermediate models every this many iterations within an epoch.If = 0, will not save models within an epoch.  [0]
 * `-report_every`:  Print stats every this many iterations within an epoch. [50]
 * `-seed`:  Seed for random initialization [3435]
+
+* `-profiler`: Generate profiling logs [false]
+* `-log_file`: Outputs logs to a file under this path instead of stdout. []
+* `-disable_logs`: If = true, output nothing. [false]
+* `-log_level`: Outputs logs at this level and above. Possible options are: DEBUG, INFO, WARNING and ERROR. [INFO]
 
 ### Training From Snapshots
 
