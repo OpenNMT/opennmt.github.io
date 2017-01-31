@@ -242,9 +242,9 @@ source|||target
 Where `source` and `target` are **case sensitive** and **single** tokens.
 
 
-### CPU Translation
+### Releasing models
 
-After training a model on the GPU, you may want to release it to run on the CPU with the `release_model.lua` script.
+After training a model, you may want to release it for inference only by using the `release_model.lua` script. A released model takes less space on disk and is compatible with CPU translation.
 
 ```
 th tools/release_model.lua -model model.t7 -gpuid 1
