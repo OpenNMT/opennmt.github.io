@@ -86,12 +86,6 @@ By default, features vocabulary size is unlimited. Depending on the type of feat
 -src_vocab_size 50000,60,100
 ```
 
-#### Embeddings
-
-The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
-
-By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
-
 ## Training
 
 ### Training from snapshots
@@ -106,6 +100,12 @@ parameter using newly passed in options. To override this, and
 continue from the previous location use the `-continue` option.
 
 ### Multi-GPU training
+### Word features embeddings
+
+The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
+
+By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
+
 
 OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
 
