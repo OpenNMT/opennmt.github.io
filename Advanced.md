@@ -42,7 +42,7 @@ dictionary files. By default these embeddings will be updated during
 training, but they can be held fixed using `-fix_word_vecs_enc` and
 `-fix_word_vecs_dec`.
 
-### Word Features
+### Word features
 
 OpenNMT supports additional features on source and target words in the form of **discrete labels**.
 
