@@ -31,7 +31,7 @@ If an option appears both in the file and on the command line, the file takes pr
 
 ## Data Preparation
 
-### Pre-trained Embeddings
+### Pre-trained embeddings
 
 When training with small amounts of data, performance can be improved
 by starting with pretrained embeddings. The arguments
@@ -94,7 +94,7 @@ By default each embedding is concatenated. You can choose to sum them by setting
 
 ## Training
 
-### Training From Snapshots
+### Training from snapshots
 
 As training translation models can take a long time (sometimes many
 weeks), OpenNMT supports resuming a model from a snapshot. By default,
@@ -105,7 +105,7 @@ the starting snapshot. By default the system will train starting from
 parameter using newly passed in options. To override this, and 
 continue from the previous location use the `-continue` option.
 
-### Multi-GPU Training
+### Multi-GPU training
 
 OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
 
@@ -125,7 +125,7 @@ of the parameters. Note that a GPU core is dedicated to storage of the master co
 
 ## Translation
 
-### Translation and Beam Search
+### Translation and beam search
 
 By default translation is done using beam search. The `-beam_size`
 option can be used to trade-off translation time and search accuracy,
@@ -136,7 +136,7 @@ greater than 1. For analysis, the translation command also takes an
 oracle/gold `-tgt` file and will output a comparison of scores.
 
 
-### Translating Unknown Words
+### Translating unknown words
 
 The default translation mode allows the model to produce the UNK
 symbol when it is not sure of the specific target word. Often times
@@ -171,7 +171,7 @@ th tools/release_model.lua -model model.t7 -gpuid 1
 
 By default, it will create a `model_release.t7` file. See `th tools/release_model.lua -h` for advanced options.
 
-### C++ Translator
+### C++ translator
 
 OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/ctranslate">translator</a> for CPU deployment. The code has no dependencies on Torch or Lua and can be run out of the box with standard OpenNMT models. Simply follow the CPU instructions above to release the model, and then use the [installation instructions](https://github.com/opennmt/ctranslate).
 
@@ -221,7 +221,7 @@ print sock.recv()
 For a longer example, see our <a href="http://github.com/OpenNMT/Server/">Python/Flask server</a> in development. 
 
 
-##  Extending the System (Image-to-Text)
+##  Extending the system (Image-to-Text)
 
 OpenNMT is explicitly separated out into a library and application 
 section. All modeling and training code can be directly used within
