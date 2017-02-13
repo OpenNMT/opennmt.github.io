@@ -88,24 +88,49 @@ By default, features vocabulary size is unlimited. Depending on the type of feat
 
 ## Training
 
-### Training from snapshots
+### Training from a saved model
 
-As training translation models can take a long time (sometimes many
-weeks), OpenNMT supports resuming a model from a snapshot. By default,
-it will save a snapshot every epoch, but this can by altered with the
-`-save_every` option. Snapshots are fast to save, but can be quite
-large. To resume from a snapshot use the `-train_from` option with
-the starting snapshot. By default the system will train starting from 
-parameter using newly passed in options. To override this, and 
-continue from the previous location use the `-continue` option.
+By default, OpenNMT saves a checkpoint at the end of every epoch. For more frequent saves, you can use the `-save_every` option which defines the number of iterations after which the training saves a checkpoint.
 
-### Multi-GPU training
+There are several reasons one may want to train from a saved model with the `-train_from` option:
+
+* continuing a stopped training
+* continuing the training with a smaller batch size
+* training a model on new data (incremental adaptation)
+* starting a training from pre-trained parameters
+* etc.
+
+#### Resuming a stopped training
+
+It is common that a training stops: crash, server reboot, user action, etc. In this case, you may want to continue the training for more epochs by using using the `-continue` option. For example:
+
+```
+# start the initial training
+th train.lua -gpuid 1 -data data/demo-train.t7 -save_model demo -save_every 50
+
+# train for several epochs...
+
+# need to reboot the server!
+
+# continue the training from the last checkpoint
+th train.lua -gpuid 1 -data data/demo-train.t7 -save_model demo -save_every 50 -train_from demo_checkpoint.t7 -continue
+```
+
+The `-continue` flag ensures that the training continues with the same configuration and optimization states.
+
+#### Training from pre-trained parameters
+
+Another use case it to use a base model and train it further with new training options (in particular the optimization method and the learning rate). Using `-train_from` without `-continue` will start a new training with parameters initialized from a pre-trained model.
+
+*Note that the model topology and dropout value can not be changed during a retraining.*
+
 ### Word features embeddings
 
 The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
 
 By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
 
+### Multi-GPU training
 
 OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
 
