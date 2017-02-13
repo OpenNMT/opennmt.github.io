@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Features
+title: Advanced guide
 order: 2.5
 ---
 
