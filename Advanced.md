@@ -7,6 +7,27 @@ order: 2.5
 * TOC
 {:toc}
 
+## Configuration files
+
+When using the main scripts `preprocess.lua`, `train.lua` and `translate.lua`, you can pass your options using a configuration file. The file has a simple key-value syntax with one `option = value` per line. Here is an example:
+
+```
+$ cat generic.txt
+rnn_size = 600
+layers = 4
+brnn = true
+save_model = generic
+```
+
+It handles empty line and ignore lines prefixed with `#`.
+
+You can then pass this file along other options on the command line:
+
+```
+th train.lua -config generic.txt -data data/demo-train.t7 -gpuid 1
+```
+
+If an option appears both in the file and on the command line, the file takes priority.
 
 ## Data Preparation
 
