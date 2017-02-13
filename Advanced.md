@@ -63,7 +63,7 @@ training, but they can be held fixed using `-fix_word_vecs_enc` and
 
 ### Word Features
 
-OpenNMT supports additional features on source and target words in the form of discrete labels.
+OpenNMT supports additional features on source and target words in the form of **discrete labels**.
 
 * On the source side, these features act as additional information to the encoder. An
 embedding will be optimized for each label and then fed as additional source input
@@ -86,6 +86,30 @@ it￨C is￨l not￨l acceptable￨l that￨l ,￨n with￨l the￨l help￨l of
 ```
 
 You can generate this case feature with OpenNMT's tokenization script and the `-case_feature` flag.
+
+#### Vocabulary
+
+By default, features vocabulary size is unlimited. Depending on the type of features you are using, you may want to limit their vocabulary during the preprocessing with the `-src_vocab_size` and `-tgt_vocab_size` options in the format `word_size[,feat1_size[,feat2_size[...]]]`. For example:
+
+```
+# unlimited source features vocabulary size
+-src_vocab_size 50000
+
+# first feature vocabulary is limited to 60, others are unlimited
+-src_vocab_size 50000,60
+
+# second feature vocabulary is limited to 100, others are unlimited
+-src_vocab_size 50000,0,100
+
+# limit vocabulary size of the first and second feature
+-src_vocab_size 50000,60,100
+```
+
+#### Embeddings
+
+The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
+
+By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
 
 ## Training
 
