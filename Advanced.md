@@ -31,17 +31,6 @@ If an option appears both in the file and on the command line, the file takes pr
 
 ## Data Preparation
 
-### Pre-trained embeddings
-
-When training with small amounts of data, performance can be improved
-by starting with pretrained embeddings. The arguments
-`-pre_word_vecs_dec` and `-pre_word_vecs_enc` can be used to specify
-these files. The pretrained embeddings must be manually constructed
-torch serialized matrices that correspond to the src and tgt
-dictionary files. By default these embeddings will be updated during
-training, but they can be held fixed using `-fix_word_vecs_enc` and
-`-fix_word_vecs_dec`.
-
 ### Word features
 
 OpenNMT supports additional features on source and target words in the form of **discrete labels**.
@@ -88,6 +77,40 @@ By default, features vocabulary size is unlimited. Depending on the type of feat
 
 ## Training
 
+### Pre-trained embeddings
+
+When training with small amounts of data, performance can be improved
+by starting with pretrained embeddings. The arguments
+`-pre_word_vecs_dec` and `-pre_word_vecs_enc` can be used to specify
+these files. The pretrained embeddings must be manually constructed
+torch serialized matrices that correspond to the src and tgt
+dictionary files. By default these embeddings will be updated during
+training, but they can be held fixed using `-fix_word_vecs_enc` and
+`-fix_word_vecs_dec`.
+
+### Word features embeddings
+
+The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
+
+By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
+
+### Multi-GPU training
+
+OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
+
+```
+th train.lua -data data/demo-train.t7 -save_model demo -gpuid 1,2,4
+```
+
+will use the first, the second and the fourth GPU of the machine.
+
+There are 2 different modes:
+
+* **synchronous parallelism** (default): in this mode, each replica processes in parallel a different batch at each iteration. The gradients from each replica are accumulated, and parameters updated and synchronized. Note that when using `N` GPU(s), the actual batch size is `N * max_batch_size`.
+* **asynchronous parallelism** (`-async_parallel` flag): in this mode, the different replicas are independently
+calculating their own gradient, updating a master copy of the parameters and getting updated values
+of the parameters. Note that a GPU core is dedicated to storage of the master copy of the parameters and is not used for training. Also, to enable convergence at the beginning of the training, only one replica is working for the first `-async_parallel_minbatch` iterations.
+
 ### Training from a saved model
 
 By default, OpenNMT saves a checkpoint at the end of every epoch. For more frequent saves, you can use the `-save_every` option which defines the number of iterations after which the training saves a checkpoint.
@@ -123,29 +146,6 @@ The `-continue` flag ensures that the training continues with the same configura
 Another use case it to use a base model and train it further with new training options (in particular the optimization method and the learning rate). Using `-train_from` without `-continue` will start a new training with parameters initialized from a pre-trained model.
 
 *Note that the model topology and dropout value can not be changed during a retraining.*
-
-### Word features embeddings
-
-The feature embedding size is automatically computed based on the number of values the feature takes. The default size reduction works well for features with few values like the case or POS. For other features, you may want to manually choose the embedding size with the `src_word_vec_size` and `-tgt_word_vec_size` options. They behave similarly to `-src_vocab_size` with a comma-separated list of embedding size: `word_vec_size[,feat1_vec_size[,feat2_vec_size[...]]]`.
-
-By default each embedding is concatenated. You can choose to sum them by setting `-feat_merge sum`. Note that in this case each feature embedding must have the same dimension. You can set the common embedding size with `-feat_vec_size`.
-
-### Multi-GPU training
-
-OpenNMT supports *data parallelism* during the training. This technique allows the use of several GPUs by training batches in parallel on different *network replicas*. To enable this option, assign a list of comma-separated GPU identifier to the `-gpuid` option. For example:
-
-```
-th train.lua -data data/demo-train.t7 -save_model demo -gpuid 1,2,4
-```
-
-will use the first, the second and the fourth GPU of the machine.
-
-There are 2 different modes:
-
-* **synchronous parallelism** (default): in this mode, each replica processes in parallel a different batch at each iteration. The gradients from each replica are accumulated, and parameters updated and synchronized. Note that when using `N` GPU(s), the actual batch size is `N * max_batch_size`.
-* **asynchronous parallelism** (`-async_parallel` flag): in this mode, the different replicas are independently
-calculating their own gradient, updating a master copy of the parameters and getting updated values
-of the parameters. Note that a GPU core is dedicated to storage of the master copy of the parameters and is not used for training. Also, to enable convergence at the beginning of the training, only one replica is working for the first `-async_parallel_minbatch` iterations.
 
 
 ## Translation
