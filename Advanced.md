@@ -249,7 +249,7 @@ code can be used to send a single sentence for translation.
 import zmq, sys, json
 sock = zmq.Context().socket(zmq.REQ)
 sock.connect("tcp://127.0.0.1:5556")
-sock.send(json.dumps([{"src": " ".join(sys.argv[1:])}], ensure_ascii=False))
+sock.send(json.dumps([{"src": " ".join(sys.argv[1:])}]))
 print sock.recv()
 ```
 
