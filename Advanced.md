@@ -215,7 +215,7 @@ The C++ version takes the same arguments as `translate.lua`.
 ```cli/translate --model model_release.t7 --src src-val.txt
 ```
 
-### Translation Server
+### Translation server
 
 OpenNMT includes a translation server for running translate remotely. This also is an
 easy way to use models from other languages such as Java and Python. 
@@ -249,7 +249,7 @@ code can be used to send a single sentence for translation.
 import zmq, sys, json
 sock = zmq.Context().socket(zmq.REQ)
 sock.connect("tcp://127.0.0.1:5556")
-sock.send(json.dumps([{"src": " ".join(sys.argv[1:])}]))
+sock.send(json.dumps([{"src": " ".join(sys.argv[1:])}], ensure_ascii=False))
 print sock.recv()
 ```
 
