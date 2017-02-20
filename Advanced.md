@@ -212,7 +212,8 @@ OpenNMT also includes an optimized C++-only <a href="https://github.com/opennmt/
 
 The C++ version takes the same arguments as `translate.lua`.
 
-```cli/translate --model model_release.t7 --src src-val.txt
+```
+cli/translate --model model_release.t7 --src src-val.txt
 ```
 
 ### Translation server
