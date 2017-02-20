@@ -88,7 +88,8 @@ Internally the system never touches the words themselves, but uses these indices
 
 ### Step 2: Train the model
 
-```th train.lua -data data/demo-train.t7 -save_model demo-model
+```
+th train.lua -data data/demo-train.t7 -save_model demo-model
 ```
 
 The main train command is quite simple. Minimally it takes a data file
@@ -101,7 +102,8 @@ Get the full options list on the <a href="http://opennmt.net//Advanced/#train---
 
 ### Step 3: Translate
 
-```th translate.lua -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]
+```
+th translate.lua -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]
 ```
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
