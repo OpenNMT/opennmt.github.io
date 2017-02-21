@@ -63,5 +63,5 @@ The corpus used is completely parallel - and there are only 200,000 sentences pe
 
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------|:-----|
-| 2016/21/12<br>Baseline | [Gigaword Standard](https://github.com/harvardnlp/sent-summary) | OpenNMT `111f16a` | default options:<br>2 layers, RNN 500, WE 500, input feed<br>11 epochs | <small>Trained on 1 GPU TITAN X  |  | Gigaword F-Score R1: 33.13 R2: 16.09 RL: 31.00  | 572M [here](https://s3.amazonaws.com/opennmt-models/sum_model_epoch11_14.62.t7) |
+| 2016/21/12<br>Baseline | [Gigaword Standard](https://github.com/harvardnlp/sent-summary) | OpenNMT `111f16a` | default options:<br>2 layers, RNN 500, WE 500, input feed<br>11 epochs | <small>Trained on 1 GPU TITAN X  |  | Gigaword F-Score R1: 33.13 R2: 16.09 RL: 31.00  | 572M [here](https://s3.amazonaws.com/opennmt-models/sum_model_epoch11_14.62.t7) or [cpu release](https://s3.amazonaws.com/opennmt-models/textsum_epoch7_14.69_release.t7)|
 
