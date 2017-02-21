@@ -229,12 +229,6 @@ luarocks install dkjson
 luarocks install lua-zmq ZEROMQ_LIBDIR=/usr/lib/x86_64-linux-gnu/ ZEROMQ_INCDIR=/usr/include
 ```
 
-Also you will need to install the OpenNMT as a library.
-
-```
-luarocks make rocks/opennmt-scm-1.rockspec
-```
-
 The translation server can be run using any of the arguments from `translate.lua`. 
 
 ```
