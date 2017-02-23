@@ -20,21 +20,21 @@ OpenNMT consists of three steps. (These steps assume you data is already tokeniz
 
 1) Preprocess the data.
 
-```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
+`th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo`
 
 2) Train the model.
 
-```th train.lua -data data/demo-train.t7 -save_model model [-gpuid 1]```
+`th train.lua -data data/demo-train.t7 -save_model model [-gpuid 1]`
 
 3) Translate sentences.
 
-```th translate.lua -model model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]```
+`th translate.lua -model model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]`
 
 Let's walk through each of these commands in more detail. 
 
 ### Step 1: Preprocess Data
 
-```th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
+`th preprocess.lua -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo`
 
 Here we are working with example data in `data/` folder.
 The data consists of a source (`src`) and target (`tgt`) data.
@@ -88,9 +88,7 @@ Internally the system never touches the words themselves, but uses these indices
 
 ### Step 2: Train the model
 
-```
-th train.lua -data data/demo-train.t7 -save_model demo-model
-```
+`th train.lua -data data/demo-train.t7 -save_model demo-model`
 
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
@@ -102,9 +100,7 @@ Get the full options list on the <a href="http://opennmt.net//Advanced/#train---
 
 ### Step 3: Translate
 
-```
-th translate.lua -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]
-```
+`th translate.lua -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-gpuid 1]`
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
 
@@ -123,7 +119,7 @@ Our demo data comes pre-tokenized. If you data is not tokenized, we also provide
 
 1) Tokenize your data (file is src-train.txt, tgt-train.txt, valid and test sets as well)
 
-```th tools/tokenize.lua -joiner_annotate < file > file.tok```
+`th tools/tokenize.lua -joiner_annotate < file > file.tok`
 
 The `tokenize.lua` script can also handle following options:
 
@@ -134,7 +130,7 @@ Get the full options list on the <a href="http://opennmt.net//Advanced/#tokenize
 
 2) Detokenize the output.
 
-```th tools/detokenize.lua < file-tgt.tok > file-tgt.detok```
+`th tools/detokenize.lua < file-tgt.tok > file-tgt.detok`
 
 The `detokenize.lua` script can also handle following options:
 
