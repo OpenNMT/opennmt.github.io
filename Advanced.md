@@ -7,6 +7,8 @@ order: 2.5
 * TOC
 {:toc}
 
+[Note: these features are currently only supported in the main Lua/Torch version of the library. If there is a feature you would like in Python, please vote for it in our <a href="forum.opennmt.net">forum</a>.]
+
 ## Configuration files
 
 When using the main scripts `preprocess.lua`, `train.lua` and `translate.lua`, you can pass your options using a configuration file. The file has a simple key-value syntax with one `option = value` per line. Here is an example:
