@@ -10,7 +10,7 @@ order: 2.2
 Recently Facebook Research released a Python port of the OpenNMT library. This version has the same API as standard OpenNMT. 
 However it is currently in experimental mode and does not yet have all the advanced features documented for the Lua version. 
 
-Currently we are hosting a fork of the library at https://github.com/opennmt/pyopennmt. We hope to soon to support this library back in parallel with the main OpenNMT.
+Currently we are hosting a <a href="https://github.com/opennmt/pyopennmt">fork of the library</a>. We hope to soon to support this library back in parallel with the main OpenNMT.
 
 ## Installation
 
