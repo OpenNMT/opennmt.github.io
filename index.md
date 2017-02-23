@@ -6,7 +6,7 @@ order: 1
 
 <a href="https://opennmt.github.io/">OpenNMT</a> is a industrial-strength,
 open-source (MIT) neural machine translation system utilizing the
-[Torch](http://torch.ch) mathematical toolkit. 
+[Torch](http://torch.ch)/[PyTorch](http://pytorch.org) mathematical toolkit. 
 
 <center style="padding: 40px"><img width="80%" src="http://opennmt.github.io/simple-attn.png" /></center>
 
