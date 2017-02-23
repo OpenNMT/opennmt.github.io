@@ -1,17 +1,16 @@
 ---
 layout: page
 title: Quickstart [Python]
-order: 2.5
+order: 2.2
 ---
 
 * TOC
 {:toc}
 
 Recently Facebook Research released a Python port of the OpenNMT library. This version has the same API as standard OpenNMT. 
-However it does not yet have all the advanced features documented for the Lua version. 
+However it is currently in experimental mode and does not yet have all the advanced features documented for the Lua version. 
 
-Currently we are hosting a fork of the library at https://github.com/opennmt/pyopennmt. We hope to soon to support this library back
-in parallel with the main OpenNMT.
+Currently we are hosting a fork of the library at https://github.com/opennmt/pyopennmt. We hope to soon to support this library back in parallel with the main OpenNMT.
 
 ## Installation
 
@@ -28,7 +27,7 @@ OpenNMT consists of three steps. (These steps assume you data is already tokeniz
 
 2) Train the model.
 
-```python train.py -data data/demo-train.t7 -save_model model [-gpuid 1]```
+```python train.py -data data/demo-train.t7 -save_model model [-cuda]```
 
 3) Translate sentences.
 
@@ -97,7 +96,7 @@ python train.py -data data/demo-train.t7 -save_model demo-model
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
-can also add `-gpuid 1` to use (say) GPU 1.
+can also add `-cuda` to use a GPU.
 
 
 
