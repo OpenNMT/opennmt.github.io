@@ -1,8 +1,8 @@
 
 ---
 layout: page
-title: Quickstart
-order: 2.5
+title: Quickstart [Python]
+order: 3
 ---
 
 * TOC
