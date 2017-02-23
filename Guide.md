@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Quickstart
+title: Quickstart [Lua]
 order: 2
 ---
 
