@@ -23,21 +23,21 @@ OpenNMT consists of three steps. (These steps assume you data is already tokeniz
 
 1) Preprocess the data.
 
-```python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
+`python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo`
 
 2) Train the model.
 
-```python train.py -data data/demo-train.t7 -save_model model [-cuda]```
+`python train.py -data data/demo-train.pt -save_model model [-cuda]`
 
 3) Translate sentences.
 
-```python translate.py -model model_final.t7 -src data/src-val.txt -output file-tgt.tok [-cuda]```
+`python translate.py -model model_final.pt -src data/src-val.txt -output file-tgt.tok [-cuda]`
 
 Let's walk through each of these commands in more detail. 
 
 ### Step 1: Preprocess Data
 
-```python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo```
+`python preprocess.py -train_src data/src-train.txt -train_tgt data/tgt-train.txt -valid_src data/src-val.txt -valid_tgt data/tgt-val.txt -save_data data/demo`
 
 Here we are working with example data in `data/` folder.
 The data consists of a source (`src`) and target (`tgt`) data.
@@ -64,7 +64,7 @@ After running the system will build the following files:
 
 * `demo.src.dict`: Dictionary of source vocab to index mappings.
 * `demo.tgt.dict`: Dictionary of target vocab to index mappings.
-* `demo-train.t7`: serialized Torch file containing vocabulary, training and validation data
+* `demo-train.pt`: serialized Torch file containing vocabulary, training and validation data
 
 The `*.dict` files are needed to check vocabulary, or to preprocess data with fixed vocabularies.
 These files are simple human-readable dictionaries.
@@ -89,9 +89,7 @@ Internally the system never touches the words themselves, but uses these indices
 
 ### Step 2: Train the model
 
-```
-python train.py -data data/demo-train.t7 -save_model demo-model
-```
+`python train.py -data data/demo-train.pt -save_model demo-model`
 
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
@@ -102,9 +100,7 @@ can also add `-cuda` to use a GPU.
 
 ### Step 3: Translate
 
-```
-python translate.py -model demo-model_final.t7 -src data/src-val.txt -output file-tgt.tok [-cuda]
-```
+`python translate.py -model demo-model_final.pt -src data/src-val.txt -output file-tgt.tok [-cuda]`
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
 
