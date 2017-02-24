@@ -7,7 +7,7 @@ order: 3
 ## Pretrained
 
 
-Available models trained using OpenNMT
+Available models trained using OpenNMT (These are all currently for the Lua version of the library. PyTorch models coming soon.)
 
 * [English -> German](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7)
 * [German -> English](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.de-en_epoch13_8.98_release.t7)
