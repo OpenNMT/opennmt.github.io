@@ -20,6 +20,9 @@ Python OpenNMT only requires a vanilla <a href="http://pytorch.org">PyTorch</a> 
 
 OpenNMT consists of three steps. (These steps assume you data is already tokenized. If not see the tokenization section below.)
 
+0) Download the data.
+
+```wget https://s3.amazonaws.com/pytorch/examples/opennmt/data/onmt-data.tar && tar -xf onmt-data.tar```
 
 1) Preprocess the data.
 
@@ -27,11 +30,11 @@ OpenNMT consists of three steps. (These steps assume you data is already tokeniz
 
 2) Train the model.
 
-`python train.py -data data/demo-train.pt -save_model model [-cuda]`
+`python train.py -data data/demo-train.pt -save_model model [-gpus 0]`
 
 3) Translate sentences.
 
-`python translate.py -model model_final.pt -src data/src-val.txt -output file-tgt.tok [-cuda]`
+`python translate.py -model model_final.pt -src data/src-val.txt -output file-tgt.tok [-gpu 0]`
 
 Let's walk through each of these commands in more detail. 
 
@@ -94,13 +97,13 @@ Internally the system never touches the words themselves, but uses these indices
 The main train command is quite simple. Minimally it takes a data file
 and a save file.  This will run the default model, which consists of a
 2-layer LSTM with 500 hidden units on both the encoder/decoder. You
-can also add `-cuda` to use a GPU.
+can also add `-gpus 0` to use the first GPU.
 
 
 
 ### Step 3: Translate
 
-`python translate.py -model demo-model_final.pt -src data/src-val.txt -output file-tgt.tok [-cuda]`
+`python translate.py -model demo-model_final.pt -src data/src-val.txt -output file-tgt.tok [-gpu 0]`
 
 Now you have a model which you can use to predict on new data. We do this by running beam search.
 
