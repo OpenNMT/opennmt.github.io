@@ -218,7 +218,37 @@ The C++ version takes the same arguments as `translate.lua`.
 cli/translate --model model_release.t7 --src src-val.txt
 ```
 
-### Translation server
+### Translation REST server
+
+OpenNMT includes a REST translation server for running translate remotely.
+You can use an easy REST syntax to simply send plain text.
+Sentence will be tokenized, translated and then detokenized.
+
+The server uses the restserver-xavante dependancy, you need to install it by running:
+
+```
+luarocks install restserver-xavante
+```
+
+The translation server can be run using any of the arguments from `tokenize.lua` or `translate.lua`. 
+
+```
+th tools/rest_translation_server.lua -model ../Recipes/baseline-1M-enfr/exp/model-baseline-1M-enfr_epoch13_3.44.t7 -gpuid 1 -host ... -port -case_feature -bpe_model ...
+```
+
+**Note:** the default host is set to `127.0.0.1` , default port is set to `7784`.
+
+You can test it with a curl command locally or from any other client.
+
+```curl
+curl -v -H "Content-Type: application/json" -X POST -d '{ "src" : "Hello World }' http://IP_address:7784/translator/translate
+```
+
+Answer will be embeeded in a JSON format, translated sentence in the "tgt" section.
+
+Additionnally you can get the attention matrix with the `-withAttn` option in the server command line. 
+
+### Translation ZMQ server
 
 OpenNMT includes a translation server for running translate remotely. This also is an
 easy way to use models from other languages such as Java and Python. 
