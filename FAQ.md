@@ -56,53 +56,6 @@ want training to finish in a reasonable amount of time. For
 medium-size models you will need at least 4GB; for full-size
 state-of-the-art models 8-12GB is recommend.
 
-### How can I install OpenNMT on my own system (with or without root)?
-
-Follow the quick-start instructions on the <a href="http://torch.ch/docs/getting-started.html">Torch page</a>.
-
-You may also need to install the `tds` library,
-
-```luarocks install tds```
-
-Afterwards you can just checkout the repo and run. 
-
-### How can I use this system with Docker (on Ubuntu)?
-
-First you need to install `nvidia-docker`.
-
-```
-wget -P /tmp https://github.com/NVIDIA/nvidia-docker/releases/download/v1.0.0-rc.3/nvidia-docker_1.0.0.rc.3-1_amd64.deb
-sudo dpkg -i /tmp/nvidia-docker*.deb
-```
-
-If this command does not work, you may need to run the following updates, 
-
-```
-sudo apt-add-repository 'deb https://apt.dockerproject.org/repo ubuntu-xenial main'
-sudo apt-get update
-sudo apt-get install docker-engine nvidia-modprobe
-```
-
-Then simply run our Docker container
-
-```sudo nvidia-docker run -it harvardnlp/opennmt:8.0 .```
-
-Once in the instance, check out the latest code
-
-```git clone https://github.com/opennmt/opennmt.git```
-
-### What about on Amazon EC2?
-
-The best way to do this is through Docker. We have a public AMI with the preliminary
-CUDA drivers installed: `ami-c12f86a1`. Start a P2/G2 GPU instance with this AMI and
-run the `nvidia-docker` command above to get started. 
-
-### How can I use OpenNMT as a library?
-
-You can install OpenNMT as a library in the standard way,
-
-```luarocks make rocks/opennmt-scm-1.rockspec```
-
 ### How can I trust that the current version of OpenNMT is working?
 
 We run a daily integration test of the system on EC2 to check that it is functioning
