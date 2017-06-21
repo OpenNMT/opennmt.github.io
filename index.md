@@ -4,7 +4,7 @@ title: Home
 order: 1
 ---
 
-<a href="https://opennmt.github.io/">OpenNMT</a> is a industrial-strength,
+<a href="https://opennmt.github.io/">OpenNMT</a> is an industrial-strength,
 open-source (MIT) neural machine translation system utilizing the
 [Torch](http://torch.ch)/[PyTorch](http://pytorch.org) mathematical toolkit. 
 
@@ -16,7 +16,7 @@ maintaining efficiency and state-of-the-art translation accuracy.
 
 Features include:
 
-* Simple general-purpose interface, requires only source/target files.
+* Simple general-purpose interface, requiring only source/target files.
 * Speed and memory optimizations for high-performance <a href="http://opennmt.net/OpenNMT/training/multi_gpu/">multi-GPU</a> training.
 * Includes a dependency-free <a href="https://github.com/OpenNMT/CTranslate/">C++ translator</a> for model deployment.
 * Latest research features to improve translation performance.
