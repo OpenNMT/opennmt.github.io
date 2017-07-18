@@ -90,7 +90,7 @@ Partially. OpenNMT can be extended with additional Torch neural networks, and a 
 
 ### Is the OpenNMT demo server available?
 
-Unfortunately we cannot open-source the demo server. However you can run OpenNMT in <a href="http://opennmt.net//Guide/#translation-server">server mode</a> and we are developing a<a href="https://github.com/OpenNMT/Server/">web interface</a>. Contributions are welcome. 
+Unfortunately we cannot open-source the demo server. However, you can run OpenNMT in <a href="http://opennmt.net/OpenNMT/tools/servers/">server mode</a>. Contributions are welcome. 
 
 ## Contributions
 
