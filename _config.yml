@@ -9,7 +9,7 @@ permalink:        pretty
 # Setup
 title:            'OpenNMT'
 tagline:          'Open-Source Neural Machine Translation'
-description:      'An open-source neural machine translation system.'
+description:      'An open source neural machine translation system.'
 url:              http://opennmt.net
 baseurl:          http://opennmt.net
 google_analytics: UA-89222039-1
@@ -20,6 +20,3 @@ author:
 
 # Custom vars
 version:          0.1
-
-github:
-  repo:           https://github.com/opennmt/opennmt
