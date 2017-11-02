@@ -4,22 +4,24 @@ title: Home
 order: 1
 ---
 
-<a href="https://opennmt.github.io/">OpenNMT</a> is an industrial-strength,
-open-source (MIT) neural machine translation system utilizing the
-[Torch](http://torch.ch)/[PyTorch](http://pytorch.org) mathematical toolkit. 
+[OpenNMT](http://opennmt.net/) is an open source (MIT) initiative for neural machine translation and neural sequence modeling.
 
 <center style="padding: 40px"><img width="80%" src="http://opennmt.github.io/simple-attn.png" /></center>
 
-OpenNMT is used as provided in <a href="https://demo-pnmt.systran.net/">production</a> by major translation providers.
-The system is designed to be simple to use and easy to extend, while
-maintaining efficiency and state-of-the-art translation accuracy.
+Since its launch in December 2016, OpenNMT has become a collection of implementations targeting both academia and industry. The systems are designed to be simple to use and easy to extend, while maintaining efficiency and state-of-the-art accuracy.
 
-Features include:
+**OpenNMT has currently 3 main implementations:**
+
+* [OpenNMT-lua](https://github.com/OpenNMT/OpenNMT) (a.k.a. OpenNMT): the original project developed with [LuaTorch](http://torch.ch).<br/>Full-featured, optimized, and stable code ready for quick experiments and production.
+* [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py): an OpenNMT-lua clone using the more modern [PyTorch](http://pytorch.org).<br/>Initially created by the Facebook AI research team as an example, this implementation is easier to extend and particularly suited for research.
+* [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf): a [TensorFlow](https://www.tensorflow.org/) alternative.<br/>The more recent project focusing on large scale experiments and high performance model serving using the latest TensorFlow features.
+
+All versions are currently maintained.
+
+**Common features include:**
 
 * Simple general-purpose interface, requiring only source/target files.
-* Speed and memory optimizations for high-performance <a href="http://opennmt.net/OpenNMT/training/multi_gpu/">multi-GPU</a> training.
-* Includes a dependency-free <a href="https://github.com/OpenNMT/CTranslate/">C++ translator</a> for model deployment.
-* Latest research features to improve translation performance.
-* Pretrained <a href="Models">models</a> available for several language pairs.
-* Extensions to allow other sequence generation tasks such as <a href="Models">summarization</a> and <a href="https://github.com/opennmt/im2text">image-to-text</a> generation.
-* Active open <a href="http://forum.opennmt.net">community</a> welcoming both academic and industrial requests and contributions.
+* Highly configurable models and training procedures.
+* Recent research features to improve system performance.
+* Extensions to allow other sequence generation tasks such as summarization, image-to-text, or speech-recognition.
+* Active <a href="http://forum.opennmt.net">community</a> welcoming both academic and industrial requests and contributions.

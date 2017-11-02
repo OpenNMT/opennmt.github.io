@@ -1,24 +1,18 @@
 ---
 layout: page
-title: Models and Recipes
+title: Torch Models
 order: 3
 ---
 
 ## Pretrained
 
 
-Available models trained using OpenNMT (These are all currently for the Lua version of the library. PyTorch models coming soon.)
+Available models trained using OpenNMT.
 
 * [English -> German](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.en-de_epoch13_7.19_release.t7)
 * [German -> English](https://s3.amazonaws.com/opennmt-models/onmt_baseline_wmt15-all.de-en_epoch13_8.98_release.t7)
 * [English Summarization](https://s3.amazonaws.com/opennmt-models/sum_model_epoch11_14.62.t7)
 * [Multi-way - FR,ES,PT,IT,RO<>FR,ES,PT,IT,RO](https://s3.amazonaws.com/opennmt-models/onmt_esfritptro-4-1000-600_epoch13_3.12_release.t7)
-
-More models coming soon:
-
-* Ubuntu Dialogue Dataset
-* Syntactic Parsing
-* Image-to-Text
 
 ## Tutorials and Recipes
 
