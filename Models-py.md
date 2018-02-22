@@ -34,4 +34,4 @@ This page benchmarks training results of open-source NMT systems with generated 
 
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Translate Parameters | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------------|:------|:-----|
-| 2018/02/22<br>Baseline | [Opensubtitles](http://opus.lingfil.uu.se/download.php?f=OpenSubtitles/en.tar.gz) | OpenNMT `338b3b1` | 2 layers, RNN 500, WE 500, input feed, dropout 0.2, global_attention mlp, start_decay_at 7<br>13 epochs | <small>Trained on 1 GPU TITAN X  |  | | TBD  | 173MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/dialog/model_acc_39.74_ppl_26.63_e13.pt) |
+| 2018/02/22<br>Baseline | [Opensubtitles](http://opus.lingfil.uu.se/download.php?f=OpenSubtitles/en.tar.gz) | OpenNMT `338b3b1` | 2 layers, RNN 500, WE 500, input feed, dropout 0.2, global_attention mlp, start_decay_at 7<br>13 epochs | <small>Trained on 1 GPU TITAN X  |  | | TBD  | 355MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/dialog/model_acc_39.74_ppl_26.63_e13.pt) |
