@@ -35,7 +35,7 @@ This page benchmarks training results of open-source NMT systems with generated 
 
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Translation Parameters | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------------|:------|:-----|
-|[playma](https://github.com/playma) 2018/02/25 | [LCSTS](http://icrc.hitsz.edu.cn/Article/show/139.html)<br/>src_vocab_size 8000, tgt_vocab_size 8000, src_seq_length 400, tgt_seq_length 30, src_seq_length_trunc 400, tgt_seq_length_trunc 100 | OpenNMT `d4ab35a` | 1 layer, LSTM 300, WE 500, encoder_type brnn, input feed<br>AdaGrad, adagrad_accumulator_init 0.1, learning_rate 0.15<br/>30 epochs |  | | | Gigaword F-Score R1: 35.67 R2: 23.06 RL: 33.14  | 99MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/summary/LCSTS/model_acc_56.86_ppl_10.97_e11.pt) |
+|[playma](https://github.com/playma) 2018/02/25 | [LCSTS](http://icrc.hitsz.edu.cn/Article/show/139.html)<br/>src_vocab_size 8000, tgt_vocab_size 8000, src_seq_length 400, tgt_seq_length 30, src_seq_length_trunc 400, tgt_seq_length_trunc 100 | OpenNMT `338b3b1` | 1 layer, LSTM 300, WE 500, encoder_type brnn, input feed<br>AdaGrad, adagrad_accumulator_init 0.1, learning_rate 0.15<br/>30 epochs |  | | | Gigaword F-Score R1: 35.67 R2: 23.06 RL: 33.14  | 99MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/summary/LCSTS/model_acc_56.86_ppl_10.97_e11.pt) |
 
 ### Dialog System
 
