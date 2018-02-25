@@ -22,7 +22,7 @@ This page benchmarks training results of open-source NMT systems with generated 
 
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Translation Parameters | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------------|:------|:-----|
-| 2018/02/11<br>Baseline | [IWSLT '14 DE-EN](https://github.com/facebookresearch/fairseq-py/blob/master/data/prepare-iwslt14.sh) | OpenNMT `d4ab35a` | 2 layers, LSTM 500, WE 500, input feed<br>20 epochs | <small>Trained on 1 GPU TITAN X  |  | | BLEU Score: 30.33 | 203MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/translate/de-en/baseline-brnn2.s131_acc_62.71_ppl_7.74_e20.pt) |
+| 2018/02/11<br>Baseline | [IWSLT '14 DE-EN](https://github.com/facebookresearch/fairseq-py/blob/master/data/prepare-iwslt14.sh) | OpenNMT `d4ab35a` | 2 layers, LSTM 500, WE 500, encoder_type brnn input feed<br>20 epochs | <small>Trained on 1 GPU TITAN X  |  | | BLEU Score: 30.33 | 203MB [here](http://lstm.seas.harvard.edu/latex/opennmt-py-models/translate/de-en/baseline-brnn2.s131_acc_62.71_ppl_7.74_e20.pt) |
 
 ### English Summarization
 
