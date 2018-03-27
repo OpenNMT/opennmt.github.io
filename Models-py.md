@@ -23,7 +23,7 @@ This page benchmarks training results of open-source NMT systems with generated 
 
 | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Translation Parameters | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------------|:------|:-----|
-| 2018/03/15<br>Baseline | [WMT](https://s3.amazonaws.com/opennmt-trainingdata/wmt_ende_sp.tar.gz) | OpenNMT  | 6 layers, LSTM 512, BPE, Transformer |   |  | | BLEU Score: WMT14 26.89 WMT17: 28.09  |  [here](https://s3.amazonaws.com/opennmt-models/transformer-ende-wmt-pyOnmt.tar.gz) |
+| 2018/03/15<br>Baseline | [WMT](https://s3.amazonaws.com/opennmt-trainingdata/wmt_ende_sp.tar.gz) | OpenNMT  | 6 layers, LSTM 512, BPE, Transformer |   |  | [here](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-the-transformer-model) | BLEU Score: WMT14 26.89 WMT17: 28.09  |  [here](https://s3.amazonaws.com/opennmt-models/transformer-ende-wmt-pyOnmt.tar.gz) |
 
 ### German->English
 
