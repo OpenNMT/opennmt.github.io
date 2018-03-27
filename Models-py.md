@@ -41,7 +41,7 @@ This page benchmarks training results of open-source NMT systems with generated 
   
  | Who/When      | Corpus Prep     | Training Tool | Training Parameters | Server Details | Training Time/Memory | Translation Parameters | Scores | Model |
 |:------------- |:--------------- |:-------------|:-------------------|:---------------|:-------------|:------------|:------|:-----|
-| 2018/03/20<br> | [CNN/Daily Mail](https://github.com/harvardnlp/sent-summary) | OpenNMT | Transfomer 6x512 | <small>Trained on 1 GPU TITAN X  |  | (here)[http://opennmt.net/OpenNMT-py/Summarization.html] | Gigaword F-Score R1:  R2:  RL:   | 1.1GB [here](https://s3.amazonaws.com/opennmt-models/sum_transformer_model_acc_57.25_ppl_9.22_e16.pt) |
+| 2018/03/20<br> | [CNN/Daily Mail](https://github.com/harvardnlp/sent-summary) | OpenNMT | Transfomer 6x512 | <small>Trained on 1 GPU TITAN X  |  | [here](http://opennmt.net/OpenNMT-py/Summarization.html) | Gigaword F-Score R1:  R2:  RL:   | 1.1GB [here](https://s3.amazonaws.com/opennmt-models/sum_transformer_model_acc_57.25_ppl_9.22_e16.pt) |
 | 2018/03/20<br> | [CNN/Daily Mail](https://github.com/harvardnlp/sent-summary) | OpenNMT | 1 layers BiLSTM 512 | <small>Trained on 1 GPU TITAN X  |  | | Gigaword F-Score R1: 39.12 R2: 17.35  RL: 36.12  | 900MB [here](https://s3.amazonaws.com/opennmt-models/ada6_bridge_oldcopy_tagged_larger_acc_54.84_ppl_10.58_e17.pt) |
 
 ### Chinese Summarization
