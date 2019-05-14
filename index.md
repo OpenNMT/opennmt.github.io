@@ -1,27 +1,71 @@
 ---
-layout: page
+layout: index
 title: Home
 order: 1
 ---
 
-[OpenNMT](http://opennmt.net/) is an open source (MIT) initiative for neural machine translation and neural sequence modeling.
+**OpenNMT** is an open source ecosystem for neural machine translation and neural sequence learning.
 
-<center style="padding: 40px"><img width="80%" src="http://opennmt.github.io/simple-attn.png" /></center>
+<center><img width="80%" src="public/simple-attn.png" /></center>
 
-Since its launch in December 2016, OpenNMT has become a collection of implementations targeting both academia and industry. The systems are designed to be simple to use and easy to extend, while maintaining efficiency and state-of-the-art accuracy.
+Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN, the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
 
-**OpenNMT has currently 3 main implementations:**
+**OpenNMT provides implementations in 2 popular deep learning frameworks:**
 
-* [OpenNMT-lua](https://github.com/OpenNMT/OpenNMT) (a.k.a. OpenNMT): the original project developed with [LuaTorch](http://torch.ch).<br/>Full-featured, optimized, and stable code ready for quick experiments and production.
-* [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py): an OpenNMT-lua clone using the more modern [PyTorch](http://pytorch.org).<br/>Initially created by the Facebook AI research team as an example, this implementation is easier to extend and particularly suited for research.
-* [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf): a [TensorFlow](https://www.tensorflow.org/) alternative.<br/>The more recent project focusing on large scale experiments and high performance model serving using the latest TensorFlow features.
+<p>
+    <div class="cards" id="cards-primary">
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/OpenNMT-py">
+                <img src="public/pytorch.png" alt="PyTorch"/>
+                <div class="project"><strong>OpenNMT-py</strong></div>
+                <p>Extensible and fast implementation benefiting from PyTorch ease of use.</p>
+            </a>
+            <ul>
+                <li><a href="http://opennmt.net/OpenNMT-py">Documentation</a></li>
+                <li><a href="/Models-py">Pretrained models</a></li>
+            </ul>
+        </div>
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/OpenNMT-tf">
+                <img src="public/tensorflow.png" alt="TensorFlow"/>
+                <div class="project"><strong>OpenNMT-tf</strong></div>
+                <p>Modular and stable implementation relying on the TensorFlow ecosystem.</p>
+            </a>
+            <ul>
+                <li><a href="http://opennmt.net/OpenNMT-tf">Documentation</a></li>
+                <li><a href="/Models-tf">Pretrained models</a></li>
+            </ul>
+        </div>
+    </div>
+</p>
 
-All versions are currently maintained.
+Each implementation has its own set of unique features but shares similar goals:
 
-**Common features include:**
+* Highly configurable model architectures and training procedures
+* Efficient model serving capabilities for use in real world applications
+* Extensions to allow other tasks such as text generation, tagging, summarization, image to text, and speech to text
 
-* Simple general-purpose interface, requiring only source/target files.
-* Highly configurable models and training procedures.
-* Recent research features to improve system performance.
-* Extensions to allow other sequence generation tasks such as summarization, image-to-text, or speech-recognition.
-* Active <a href="http://forum.opennmt.net">community</a> welcoming both academic and industrial requests and contributions.
+**The OpenNMT ecosystem also includes projects to cover the full NMT workflow:**
+
+<p>
+    <div class="cards" id="cards-secondary">
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/Tokenizer">
+                <div class="project"><strong>Tokenizer</strong></div>
+                <p>Advanced tokenization library with C++ and Python APIs.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/nmt-wizard-docker">
+                <div class="project"><strong>nmt-wizard-docker</strong></div>
+                <p>Docker-based wrapper for training and translating using a standardized interface.</p>
+            </a>
+        </div>
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/nmt-wizard">
+                <div class="project"><strong>nmt-wizard</strong></div>
+                <p>Tasks launcher and monitor on remote platforms (SSH, EC2, etc.).</p>
+            </a>
+        </div>
+    </div>
+</p>

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: FAQ
+title: Frequently asked questions
 order: 4
 ---
 
@@ -10,73 +10,100 @@ order: 4
 
 ## General
 
-### Why neural machine translation (NMT)?
+### Why should I use OpenNMT?
 
-We care about neural machine translation for several reasons.
+OpenNMT has been successfully used in [many research and industry applications](/publications). It is now a robust and complete ecosystem for machine translation.
 
-1) Results show that NMT produces automatic translations that are
-significantly preferred by humans to other machine translation
-outputs. This has led several companies to switch NMT-based
-translation systems.
+Here are some reasons to use OpenNMT:
 
-2) Similar methods (often called seq2seq) are also effective for many
-other NLP and language-related applications such as dialogue, image
-captioning, and summarization. A recent talk from HarvardNLP describing some of these recent
-advances is available <a
-href="https://harvardnlp.github.io/seq2seq-talk/slidescmu.pdf">here</a>.
+* The 2 supported implementations, [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf), give the choice between [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/) which are 2 of the most popular deep learning toolkits.
+* The implementations are packed with many configurable models and features including for other generation tasks: summarization, speech to text, image to text, etc.
+* The [OpenNMT ecosystem](https://github.com/OpenNMT) includes tools and projects to cover the full NMT workflow: from advanced tokenization to training automation.
+* The NMT systems are able to reach high translation quality and speed, on par with the best online translation offerings.
+* You get reactive and free support on the [community forum](http://forum.opennmt.net/).
 
-3) NMT has been used as a representative application of the recent
-success of deep learning-based artificial intelligence. For instance a
-recent <a href="http://www.nytimes.com/2016/12/14/magazine/the-great-ai-awakening.html">NYT
-magazine cover story</a> focused on Google's NMT system.
+### Who is behind OpenNMT?
 
+OpenNMT is currently supported by the companies [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/). The main maintainers are:
 
-### Where can I go to learn about NMT? 
+* Guillaume Klein (SYSTRAN)
+* Vincent Nguyen (Ubiqus)
+* Jean Senellart (SYSTRAN)
 
-We recommend starting with the ACL'16 NMT <a
-href="https://sites.google.com/site/acl16nmt/home">tutorial</a>
-produced by researchers at Stanford and NYU. The tutorial also
-includes a detailed bibliography describing work in the field.
+The project was initiated in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN.
 
-### What do I need to train an NMT model?
+### Which OpenNMT implementation should I use?
 
-You just need two files: a source file and a target file. Each with
-one sentence per line with words space separated. These files can come from
-standard free translation corpora such a WMT, or it can be any other sources
-you want to train from.
+OpenNMT has 2 main implementations: [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf).
 
+You first need to decide between [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/). Both frameworks have strengths and weaknesses, see which one is more suited and easier for you to integrate.
 
-## Installation / Setup
+Then, each OpenNMT implementation has its own design and set of unique features. For example OpenNMT-py has better support for other tasks (summarization, speech, image) and is generally faster while OpenNMT-tf supports modular architectures and language modeling. See their respective GitHub repository for more details.
+
+### How to cite the OpenNMT project?
+
+If you are using the project for academic work, please cite the initial [system demonstration paper](https://www.aclweb.org/anthology/P17-4012):
+
+```
+@inproceedings{klein-etal-2017-opennmt,
+    title = "{O}pen{NMT}: Open-Source Toolkit for Neural Machine Translation",
+    author = "Klein, Guillaume  and
+      Kim, Yoon  and
+      Deng, Yuntian  and
+      Senellart, Jean  and
+      Rush, Alexander",
+    booktitle = "Proceedings of {ACL} 2017, System Demonstrations",
+    month = jul,
+    year = "2017",
+    address = "Vancouver, Canada",
+    publisher = "Association for Computational Linguistics",
+    url = "https://www.aclweb.org/anthology/P17-4012",
+    pages = "67--72",
+}
+```
+
+### Where can I get support?
+
+The [OpenNMT forum](http://forum.opennmt.net/) is the place to go for asking general questions or requesting support. You can usually expect a reply within 1 or 2 work days.
+
+For bugs, please report them on the GitHub directly.
+
+### Where can I go to learn about NMT?
+
+We recommend starting with the [ACL'16 NMT](https://sites.google.com/site/acl16nmt/home) produced by researchers at Stanford and NYU. The tutorial also includes a detailed bibliography describing work in the field.
+
+## Requirements
+
+### What do I need to train a NMT model?
+
+You just need two files: a source file and a target file. Each with one sentence per line with words that are space separated. These files can come from standard free translation corpora such a WMT, or it can be any other sources you want to train from.
 
 ### What type of computer do I need to train with?
 
-While in theory you can train on any machine; in practice for all but
-trivally small data sets you will need a GPU that supports CUDA if you
-want training to finish in a reasonable amount of time. For
-medium-size models you will need at least 4GB; for full-size
-state-of-the-art models 8-12GB is recommend.
+While in theory you can train on any machine, in practice for all but trivally small data sets you will need a GPU that supports CUDA if you want training to finish in a reasonable amount of time.
+
+We recommend a GPU with at least 8GB of memory.
 
 ## Models
 
-### How can I replicate the full-scale NMT translation results? 
+### How can I replicate the full-scale NMT translation results?
 
-We have posted a complete <a href="http://forum.opennmt.net/t/training-english-german-wmt15-nmt-engine/29">tutorial</a> for training a German-to-English translation system on standard data. 
-
+We published a [baseline training script](https://github.com/OpenNMT/OpenNMT-tf/tree/master/scripts/wmt) to train a robust German-English translation model using OpenNMT-tf. If you are using OpenNMT-py, you can apply the same preprocessing and train a Transformer model with the [recommended options](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-the-transformer-model-do-you-support-multi-gpu).
 
 ### Are there pretrained translation models that I can try?
 
-There are several different pretrained models available on the <a href="/Models">pretrained models</a> page for the Torch version.
+There are several pretrained models available for [OpenNMT-py](/Models-py) and [OpenNMT-tf](/Models-tf).
 
-### Where can I get training data for translation from X-to-X?
+### Where can I get training data for translation?
 
-Try the <a href="http://opus.lingfil.uu.se/">OPUS</a> Project. An open-source collection of parallel corpora. After stripping XML tags, you should be able to use the raw files directly in OpenNMT. 
+Try the [OPUS](http://opus.lingfil.uu.se/) project. An open-source collection of parallel corpora. After stripping XML tags, you should be able to use the raw files directly in OpenNMT.
 
 ### I am interested in other seq2seq-like problems such as summarization, dialogue, tree-generation. Can OpenNMT work for these?
 
-Yes. OpenNMT is a general-purpose attention-based seq2seq system. There is very little code that is translation specific, and so it should be effective for many of these applications. 
+Yes. OpenNMT is a general-purpose attention-based seq2seq system. There is very little code that is translation specific, and so it should be effective for many of these applications.
 
-For the case of summarization, OpenNMT has been shown to be more effective than neural systems like <a href="https://github.com/facebook/NAMAS">NAMAS</a>, and will be supported going forward. See the <a href="/Models">models</a> page for a pretrained summarization system on the Gigaword dataset. 
+For the case of summarization, OpenNMT has been shown to be more effective than neural systems like [NAMAS](https://github.com/facebook/NAMAS), and will be supported going forward. See the [OpenNMT-py models](/Models-py) page for a pretrained summarization system on the Gigaword dataset.
 
-### I am interested in variants of seq2seq such as image-to-sequence generation. Can OpenNMT work for these? 
+### I am interested in variants of seq2seq such as image-to-text generation. Can OpenNMT work for these?
 
-Yes. As an example, we have implemented a relatively general-purpose <a href="http://github.com/OpenNMT/im2text">im2text</a> system, with a small amount of additional code. Feel free to use this as a model for extending OpenNMT. 
+Yes. OpenNMT-py includes a relatively general-purpose [im2text](http://opennmt.net/OpenNMT-py/im2text.html) system, with a small amount of additional code. Feel free to use this as a model for extending OpenNMT.

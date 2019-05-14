@@ -1,69 +1,210 @@
-/* Language top bar */
-#select-language {
-    margin-top: 20px;
-    font-size: 0.7em;
+html, body {
+    height: 100%;
+}
+
+body {
+    background-color: #eee;
+}
+
+#main-container {
+    position: relative;
+    overflow: hidden;
+    background-color: white;
+}
+
+main a {
+  color: #ac4142;
+}
+
+/* Header */
+header {
+    background-color: #ac4142;
+    box-shadow: 0 3px 4px -1px rgba(0,0,0,0.25);
+    padding-bottom: 10px;
+    z-index: 10;
+    position: relative;
+}
+header, header a {
     color: white;
 }
-#select-language ul {
+
+#meta-links {
+    font-size: 0.8em;
+}
+#meta-links ul {
     list-style-type: none;
     padding: 0;
-}
-#select-language ul li {
-    display: inline-block;
-    padding: 0 5px;
-}
-
-/* Sidebar customization */
-.sidebar {
-    padding: 0 1rem;
-}
-
-.sidebar-about h1 {
-    display: block;
-    margin: 0 auto -1rem auto;
-    width:200px
-}
-
-.sidebar-about h1 center a img {
     margin: 0;
-    border-radius: 0;
-    width: auto;
 }
 
-.lead {
-    font-size: 1.1rem;
-    line-height: 1.1rem;
-    padding: 1rem 0 1rem 0;
+#meta-links ul li {
+    display: inline-block;
+    margin-left: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    margin-top: -1px;
+}
+
+#meta-links ul li a {
+    display: block;
+    color: rgba(255, 255, 255, 0.6);
+    padding: 3px 10px;
+}
+
+#meta-links ul li a:hover {
+    background-color: #d67272;
+    color: rgba(255, 255, 255, 1);
+    text-decoration: none;
+}
+
+#title {
     text-align: center;
 }
 
-.sidebar-nav ul {
-    list-style-type: none;
+#title h1 {
+    font-family: serif;
+}
+
+#title h1 img {
+    display: inline-block;
+    width: 60px;
+    vertical-align: middle;
     margin: 0;
-    padding-left: 20px;
+}
+#title h1 a:hover {
+    text-decoration: none;
+}
+
+#title .description {
+    font-size: 0.9em;
+    color: #ddd;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+nav ul li {
+    display: inline-block;
+}
+nav ul li+li {
+    margin-left: 20px;
+}
+
+/* Index cards */
+.cards {
+    flex-direction: row;
+    display: flex;
+    justify-content: center;
+}
+
+.cards .card {
+    display: inline-block;
+    flex: 0.3;
+    border-radius: 12px;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
+    overflow: hidden;
+}
+.cards .card+.card {
+    margin-left: 15px;
+}
+.cards .card .card-main {
+    display: block;
+    padding: 5px 15px;
+    color: inherit !important;
+}
+.cards .card .card-main:hover {
+    text-decoration: none;
+    background-color: #f1f1f1;
+}
+.cards .card img {
+    width: 80px;
+    margin: 0 auto 10px;
+}
+.cards .card .project {
+    text-align: center;
+    font-size: 1.3em;
+    margin-bottom: 10px;
+}
+.cards .card ul {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 0;
+}
+.cards .card ul {
+    border-top: 1px solid #ccc;
+}
+.cards .card ul a {
+    color: #777;
+}
+#cards-primary .card {
+    flex: 0.4;
+}
+#cards-secondary .project {
+    font-size: 1.1em;
+}
+#cards-secondary .card-main {
+    height: 100%;
+}
+
+#history, #history td {
+    border: none;
+}
+#history tr+tr {
+    border-top: 1px solid #e5e5e5;
+}
+#history td {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+#history tbody tr:nth-child(odd) td, #history tbody tr:nth-child(odd) th {
+    background-color: inherit;
+}
+#history td:first-child {
+    font-size: 0.8em;
+    font-weight: bold;
+    white-space: nowrap;
+    vertical-align: middle;
+    text-align: right;
+    padding-right: 0.8rem;
+}
+
+.pretrained tbody tr:nth-child(odd) td, .pretrained tbody tr:nth-child(odd) th {
+    background-color: inherit;
+}
+.pretrained td {
     font-size: 0.9em;
 }
-
-
-
-
-.container.sidebar-sticky > p {
-    font-size: 0.7rem;
-    padding: 2rem 0;
+.pretrained td:first-child {
+    width: 25%;
+    white-space: nowrap;
+    font-weight: bold;
+    background-color: #f9f9f9 !important;
+    vertical-align: top;
 }
 
-
-
-
-/* small devices */
-@media (min-width: 48em) {
-    .lead {
-        line-height: 1.2rem;
-    }
+/* Footer */
+footer {
+    border-top: 1px solid #ccc;
+    padding: 20px 0;
+    font-size: 0.8em;
+    text-align: center;
 }
-
-@media (max-width: 48em) {
-    .sidebar-about h1 {
-        margin: 0 auto;
-    }
+#quick-links, #quick-links ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+#quick-links > li {
+    display: inline-block;
+}
+#quick-links > li+li {
+    margin-left: 15%;
+}
+#quick-links a {
+    color: inherit;
+}
+#quick-links ul {
+    text-align: left;
 }
