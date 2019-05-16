@@ -23,7 +23,7 @@ If you are using OpenNMT for academic work, please cite the initial [system demo
 }
 ```
 
-We also published an updated version for AMTA 2018:
+We also published an [updated version](https://www.aclweb.org/anthology/W18-1817) for AMTA 2018:
 
 ```
 @inproceedings{klein-etal-2018-opennmt,
