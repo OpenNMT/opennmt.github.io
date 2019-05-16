@@ -3,7 +3,7 @@ layout: page
 title: Publications
 ---
 
-If you are using OpenNMT for academic work, please cite the initial [system demonstration paper](https://www.aclweb.org/anthology/P17-4012):
+If you are using OpenNMT for academic work, please cite the initial [system demonstration paper](https://www.aclweb.org/anthology/P17-4012) for ACL 2017:
 
 ```
 @inproceedings{klein-etal-2017-opennmt,
@@ -20,6 +20,27 @@ If you are using OpenNMT for academic work, please cite the initial [system demo
     publisher = "Association for Computational Linguistics",
     url = "https://www.aclweb.org/anthology/P17-4012",
     pages = "67--72",
+}
+```
+
+We also published an updated version for AMTA 2018:
+
+```
+@inproceedings{klein-etal-2018-opennmt,
+    title = "{O}pen{NMT}: Neural Machine Translation Toolkit",
+    author = "Klein, Guillaume  and
+      Kim, Yoon  and
+      Deng, Yuntian  and
+      Nguyen, Vincent  and
+      Senellart, Jean  and
+      Rush, Alexander",
+    booktitle = "Proceedings of the 13th Conference of the Association for Machine Translation in the {A}mericas (Volume 1: Research Papers)",
+    month = mar,
+    year = "2018",
+    address = "Boston, MA",
+    publisher = "Association for Machine Translation in the Americas",
+    url = "https://www.aclweb.org/anthology/W18-1817",
+    pages = "177--184",
 }
 ```
 
