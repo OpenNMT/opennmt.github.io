@@ -26,9 +26,9 @@ Here are some reasons to use OpenNMT:
 
 OpenNMT is currently supported by the companies [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/). The main maintainers are:
 
-* Guillaume Klein (SYSTRAN)
-* Vincent Nguyen (Ubiqus)
-* Jean Senellart (SYSTRAN)
+* [Guillaume Klein](https://github.com/guillaumekln) (SYSTRAN)
+* [Vincent Nguyen](https://github.com/vince62s) (Ubiqus)
+* [Jean Senellart](https://github.com/jsenellart) (SYSTRAN)
 
 The project was initiated in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN.
 
