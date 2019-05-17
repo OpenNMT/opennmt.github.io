@@ -6,7 +6,7 @@ order: 1
 
 **OpenNMT** is an open source ecosystem for neural machine translation and neural sequence learning.
 
-<center><img width="80%" src="public/simple-attn.png" /></center>
+<center><img width="80%" src="/simple-attn.png" /></center>
 
 Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN, the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
 
