@@ -17,7 +17,7 @@ OpenNMT has been successfully used in [many research and industry applications](
 Here are some reasons to use OpenNMT:
 
 * The 2 supported implementations, [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf), give the choice between [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/) which are 2 of the most popular deep learning toolkits.
-* The implementations are packed with many configurable models and features including for other generation tasks: summarization, speech to text, image to text, etc.
+* The implementations are packed with [many configurable models and features](/features) including for other generation tasks: summarization, speech to text, image to text, etc.
 * The [OpenNMT ecosystem](https://github.com/OpenNMT) includes tools and projects to cover the full NMT workflow: from advanced tokenization to training automation.
 * The NMT systems are able to reach high translation quality and speed, on par with the best online translation offerings.
 * You get reactive and free support on the [community forum](http://forum.opennmt.net/).
@@ -38,7 +38,7 @@ OpenNMT has 2 main implementations: [OpenNMT-py](https://github.com/OpenNMT/Open
 
 You first need to decide between [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/). Both frameworks have strengths and weaknesses, see which one is more suited and easier for you to integrate.
 
-Then, each OpenNMT implementation has its own design and set of unique features. For example OpenNMT-py has better support for other tasks (summarization, speech, image) and is generally faster while OpenNMT-tf supports modular architectures and language modeling. See their respective GitHub repository for more details.
+Then, each OpenNMT implementation has its own design and set of [unique features](/features). For example OpenNMT-py has better support for other tasks (summarization, speech, image) and is generally faster while OpenNMT-tf supports modular architectures and language modeling. See their respective GitHub repository for more details.
 
 ### How to cite the OpenNMT project?
 

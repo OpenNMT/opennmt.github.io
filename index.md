@@ -39,7 +39,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
     </div>
 </p>
 
-Each implementation has its own set of unique features but shares similar goals:
+Each implementation has its own set of [unique features](/features) but shares similar goals:
 
 * Highly configurable model architectures and training procedures
 * Efficient model serving capabilities for use in real world applications
