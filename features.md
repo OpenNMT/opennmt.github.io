@@ -26,7 +26,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | --- | :---: | :---: |
 | [ConvS2S](https://arxiv.org/abs/1705.03122) | ✓ | |
 | [DeepSpeech2](https://arxiv.org/abs/1512.02595v1) | ✓ | |
-| [GTP-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) | | ✓ |
+| [GPT-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) | | ✓ |
 | [Im2Text](https://arxiv.org/abs/1609.04938) | ✓ | |
 | [Listen, Attend and Spell](https://arxiv.org/abs/1508.01211) | | ✓ |
 | [RNN with attention](https://arxiv.org/abs/1508.04025) | ✓ | ✓ |
