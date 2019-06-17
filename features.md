@@ -63,7 +63,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
 | Beam search | ✓ | ✓ |
-| [Coverage penalty](https://arxiv.org/abs/1609.08144) | ✓ | |
+| [Coverage penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
 | Ensemble | ✓ | |
 | [Length penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
 | N-best rescoring | ✓ | ✓ |
