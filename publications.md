@@ -48,6 +48,7 @@ We also published an [updated version](https://www.aclweb.org/anthology/W18-1817
 
 Here is a list of selected papers using OpenNMT:
 
+{:.publications-list}
 * [Challenges in Data-to-Document Generation](http://arxiv.org/abs/1707.08052). Sam Wiseman, Stuart M. Shieber, Alexander M. Rush. 2017.
 * [Model compression via distillation and quantization](http://arxiv.org/abs/1802.05668). Antonio Polino, Razvan Pascanu, Dan Alistarh. 2018.
 * [A causal framework for explaining the predictions of black-box sequence-to-sequence models](http://arxiv.org/abs/1707.01943). David Alvarez-Melis, Tommi S. Jaakkola. 2017.

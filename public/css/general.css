@@ -28,29 +28,40 @@ header, header a {
     color: white;
 }
 
-#meta-links {
+.meta-links {
+    display: flex;
     font-size: 0.8em;
 }
-#meta-links ul {
+
+.external-links {
+    width: 50%;
+}
+
+.localization-links {
+    text-align: right;
+    width: 50%;
+}
+
+.meta-links ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
 }
 
-#meta-links ul li {
+.meta-links ul li {
     display: inline-block;
     margin-left: 15px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: -1px;
 }
 
-#meta-links ul li a {
+.meta-links ul li a {
     display: block;
     color: rgba(255, 255, 255, 0.6);
     padding: 3px 10px;
 }
 
-#meta-links ul li a:hover {
+.meta-links ul li a:hover {
     background-color: #d67272;
     color: rgba(255, 255, 255, 1);
     text-decoration: none;
