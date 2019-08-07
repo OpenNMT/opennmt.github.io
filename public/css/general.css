@@ -34,12 +34,12 @@ header, header a {
 }
 
 .external-links {
-    width: 50%;
+    width: 40%;
 }
 
 .localization-links {
     text-align: right;
-    width: 50%;
+    width: 60%;
 }
 
 .meta-links ul {
@@ -50,7 +50,7 @@ header, header a {
 
 .meta-links ul li {
     display: inline-block;
-    margin-left: 15px;
+    margin-left: 5px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     margin-top: -1px;
 }
