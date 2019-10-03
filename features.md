@@ -40,6 +40,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | [Coverage attention](https://arxiv.org/abs/1601.04811) | ✓ | |
 | Hybrid models | | ✓ |
 | Multi source | | ✓ |
+| Multiple input features | ✓ | ✓ |
 | [Relative position representations](https://arxiv.org/abs/1803.02155) | ✓ | |
 | Tied embeddings | ✓ | ✓ |
 
@@ -48,12 +49,14 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
 | Automatic evaluation | ✓ | ✓ |
-| Early stopping | ✓ | |
+| [Contrastive learning](https://ai.google/research/pubs/pub48253/) | | ✓ |
+| Early stopping | ✓ | ✓ |
 | Gradient accumulation | ✓ | ✓ |
 | [Guided alignment](https://arxiv.org/abs/1607.01628) | | ✓ |
 | Mixed precision | ✓ | ✓ |
 | Moving average | ✓ | |
-| Multi GPU | ✓ | ✓ |
+| Multi-GPU | ✓ | ✓ |
+| Multi-node | ✓ | |
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
 | Vocabulary update | | ✓ |
