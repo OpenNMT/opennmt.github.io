@@ -15,7 +15,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
 <p>
     <div class="cards" id="cards-primary">
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/OpenNMT-py">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/OpenNMT-py">
                 <img src="public/pytorch.png" alt="PyTorch"/>
                 <div class="project"><strong>OpenNMT-py</strong></div>
                 <p>User-friendly and multimodal implementation benefiting from PyTorch ease of use.</p>
@@ -26,7 +26,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
             </ul>
         </div>
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/OpenNMT-tf">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/OpenNMT-tf">
                 <img src="public/tensorflow.png" alt="TensorFlow"/>
                 <div class="project"><strong>OpenNMT-tf</strong></div>
                 <p>Modular and stable implementation relying on the TensorFlow ecosystem.</p>
@@ -50,13 +50,13 @@ Each implementation has its own set of [unique features](/features) but shares s
 <p>
     <div class="cards" id="cards-secondary">
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/CTranslate2">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/CTranslate2">
                 <div class="project"><strong>CTranslate2</strong></div>
                 <p>Custom C++ inference engine for OpenNMT models.</p>
             </a>
         </div>
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/Tokenizer">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/Tokenizer">
                 <div class="project"><strong>Tokenizer</strong></div>
                 <p>Fast and customizable text tokenization library with C++ and Python APIs.</p>
             </a>
@@ -65,13 +65,13 @@ Each implementation has its own set of [unique features](/features) but shares s
 
     <div class="cards" id="cards-secondary">
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/nmt-wizard-docker">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/nmt-wizard-docker">
                 <div class="project"><strong>nmt-wizard-docker</strong></div>
                 <p>Docker-based wrapper for training and translating using a standardized interface.</p>
             </a>
         </div>
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/nmt-wizard">
+            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/nmt-wizard">
                 <div class="project"><strong>nmt-wizard</strong></div>
                 <p>Tasks launcher and monitor on remote platforms (SSH, EC2, etc.).</p>
             </a>
