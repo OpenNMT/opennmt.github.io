@@ -5,6 +5,7 @@ order: 2
 ---
 
 {:#history}
+| October 2019 | Publication of [CTranslate2](https://github.com/OpenNMT/CTranslate2), a redesign of the original CTranslate to support OpenNMT-py and OpenNMT-tf models. |
 | August 2018 | OpenNMT publishes the fastest model running on a single CPU core at [WNMT 2018](https://aclweb.org/anthology/papers/W/W18/W18-2715/) using the CTranslate engine. |
 | July 2018 | Last version of the original LuaTorch implementation, now fully superseded by OpenNMT-py and PyTorch. |
 | March 2018 | The first [OpenNMT workshop](http://workshop-paris-2018.opennmt.net/) is held in Paris gathering more than 100 people from around the world. |

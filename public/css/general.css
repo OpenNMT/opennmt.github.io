@@ -112,13 +112,16 @@ nav ul li+li {
 
 .cards .card {
     display: inline-block;
-    flex: 0.3;
+    flex: 0.4;
     border-radius: 12px;
     box-shadow: 0 1px 2px 0 rgba(60,64,67,0.302), 0 1px 3px 1px rgba(60,64,67,0.149);
     overflow: hidden;
 }
 .cards .card+.card {
     margin-left: 15px;
+}
+.cards+.cards {
+    margin-top: 15px;
 }
 .cards .card .card-main {
     display: block;
@@ -148,9 +151,6 @@ nav ul li+li {
 }
 .cards .card ul a {
     color: #777;
-}
-#cards-primary .card {
-    flex: 0.4;
 }
 #cards-secondary .project {
     font-size: 1.1em;

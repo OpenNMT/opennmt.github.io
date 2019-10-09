@@ -50,11 +50,20 @@ Each implementation has its own set of [unique features](/features) but shares s
 <p>
     <div class="cards" id="cards-secondary">
         <div class="card">
-            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/Tokenizer">
-                <div class="project"><strong>Tokenizer</strong></div>
-                <p>Advanced tokenization library with C++ and Python APIs.</p>
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/CTranslate2">
+                <div class="project"><strong>CTranslate2</strong></div>
+                <p>Custom C++ inference engine for OpenNMT models.</p>
             </a>
         </div>
+        <div class="card">
+            <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/Tokenizer">
+                <div class="project"><strong>Tokenizer</strong></div>
+                <p>Fast and customizable text tokenization library with C++ and Python APIs.</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="cards" id="cards-secondary">
         <div class="card">
             <a class="card-main" title="GitHub" href="https://github.com/OpenNMT/nmt-wizard-docker">
                 <div class="project"><strong>nmt-wizard-docker</strong></div>
