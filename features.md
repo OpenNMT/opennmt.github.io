@@ -41,7 +41,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | Hybrid models | | ✓ |
 | Multi source | | ✓ |
 | Multiple input features | ✓ | ✓ |
-| [Relative position representations](https://arxiv.org/abs/1803.02155) | ✓ | |
+| [Relative position representations](https://arxiv.org/abs/1803.02155) | ✓ | ✓ |
 | Tied embeddings | ✓ | ✓ |
 
 ## Training
@@ -52,11 +52,12 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | [Contrastive learning](https://ai.google/research/pubs/pub48253/) | | ✓ |
 | Early stopping | ✓ | ✓ |
 | Gradient accumulation | ✓ | ✓ |
-| [Guided alignment](https://arxiv.org/abs/1607.01628) | | ✓ |
+| Supervised alignment | ✓ | ✓ |
 | Mixed precision | ✓ | ✓ |
 | Moving average | ✓ | |
 | Multi-GPU | ✓ | ✓ |
 | Multi-node | ✓ | |
+| Online tokenization | | ✓ |
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
 | Vocabulary update | | ✓ |
@@ -67,6 +68,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | --- | :---: | :---: |
 | Beam search | ✓ | ✓ |
 | [Coverage penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
+| [CTranslate2](https://github.com/OpenNMT/CTranslate2) compatibility | ✓ | ✓ |
 | Ensemble | ✓ | |
 | [Length penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
 | N-best rescoring | ✓ | ✓ |
