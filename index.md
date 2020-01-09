@@ -21,7 +21,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
                 <p>User-friendly and multimodal implementation benefiting from PyTorch ease of use.</p>
             </a>
             <ul>
-                <li><a href="http://opennmt.net/OpenNMT-py">Documentation</a></li>
+                <li><a href="/OpenNMT-py">Documentation</a></li>
                 <li><a href="/Models-py">Pretrained models</a></li>
             </ul>
         </div>
@@ -32,7 +32,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
                 <p>Modular and stable implementation relying on the TensorFlow ecosystem.</p>
             </a>
             <ul>
-                <li><a href="http://opennmt.net/OpenNMT-tf">Documentation</a></li>
+                <li><a href="/OpenNMT-tf">Documentation</a></li>
                 <li><a href="/Models-tf">Pretrained models</a></li>
             </ul>
         </div>
