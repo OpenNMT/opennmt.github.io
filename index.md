@@ -8,7 +8,7 @@ order: 1
 
 <center><img width="80%" src="/simple-attn.png" /></center>
 
-Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN, the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
+Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and [SYSTRAN]((https://www.systransoft.com/), the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](https://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
 
 **OpenNMT provides implementations in 2 popular deep learning frameworks:**
 
@@ -18,7 +18,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/OpenNMT-py">
                 <img src="public/pytorch.png" alt="PyTorch"/>
                 <div class="project"><strong>OpenNMT-py</strong></div>
-                <p>User-friendly and multimodal implementation benefiting from PyTorch ease of use.</p>
+                <p>User-friendly and multimodal, benefiting from PyTorch ease of use.</p>
             </a>
             <ul>
                 <li><a href="/OpenNMT-py">Documentation</a></li>
@@ -29,7 +29,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/OpenNMT-tf">
                 <img src="public/tensorflow.png" alt="TensorFlow"/>
                 <div class="project"><strong>OpenNMT-tf</strong></div>
-                <p>Modular and stable implementation relying on the TensorFlow ecosystem.</p>
+                <p>Modular and stable, powered by the TensorFlow ecosystem.</p>
             </a>
             <ul>
                 <li><a href="/OpenNMT-tf">Documentation</a></li>
