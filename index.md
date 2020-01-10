@@ -8,7 +8,7 @@ order: 1
 
 <center><img width="80%" src="/simple-attn.png" /></center>
 
-Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and [SYSTRAN]((https://www.systransoft.com/), the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](https://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
+Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and [SYSTRAN](https://www.systransoft.com/), the project has since been used in [several research and industry applications](/publications). It is currently maintained by [SYSTRAN](https://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/).
 
 **OpenNMT provides implementations in 2 popular deep learning frameworks:**
 
