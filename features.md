@@ -54,7 +54,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | Gradient accumulation | ✓ | ✓ |
 | Supervised alignment | ✓ | ✓ |
 | Mixed precision | ✓ | ✓ |
-| Moving average | ✓ | |
+| Moving average | ✓ | ✓ |
 | Multi-GPU | ✓ | ✓ |
 | Multi-node | ✓ | |
 | Online tokenization | | ✓ |
