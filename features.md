@@ -61,6 +61,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
 | Vocabulary update | | ✓ |
+| Weighted dataset | ✓ | ✓ |
 
 ## Decoding
 
