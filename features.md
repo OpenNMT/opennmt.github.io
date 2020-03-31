@@ -56,7 +56,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | Mixed precision | ✓ | ✓ |
 | Moving average | ✓ | ✓ |
 | Multi-GPU | ✓ | ✓ |
-| Multi-node | ✓ | |
+| Multi-node | ✓ | ✓ |
 | Online tokenization | | ✓ |
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
