@@ -3,7 +3,7 @@ layout: page
 title: Features
 ---
 
-While OpenNMT initialy focused on standard sequence to sequence models applied to machine translation, it has been extended to support many additional models and features. The tables below highlight some of the key features of each implementation.
+While OpenNMT initially focused on standard sequence to sequence models applied to machine translation, it has been extended to support many additional models and features. The tables below highlight some of the key features of each implementation.
 
 * TOC
 {:toc}
@@ -75,7 +75,7 @@ While OpenNMT initialy focused on standard sequence to sequence models applied t
 | N-best rescoring | ✓ | ✓ |
 | N-gram blocking | ✓ | |
 | Phrase table | ✓ | |
-| [Random noise](https://arxiv.org/abs/1808.09381) | | ✓ |
+| [Random noise](https://arxiv.org/abs/1808.09381) | ✓ | ✓ |
 | Random sampling | ✓ | ✓ |
 | Replace unknown | ✓ | ✓ |
 
