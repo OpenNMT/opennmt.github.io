@@ -52,7 +52,7 @@ Each implementation has its own set of [unique features](/features) but shares s
         <div class="card">
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/CTranslate2">
                 <div class="project"><strong>CTranslate2</strong></div>
-                <p>Optimized inference engine for OpenNMT models.</p>
+                <p>Fast inference engine for OpenNMT models.</p>
             </a>
         </div>
         <div class="card">

@@ -19,7 +19,7 @@ Here are some reasons to use OpenNMT:
 * The 2 supported implementations, [OpenNMT-py](https://github.com/OpenNMT/OpenNMT-py) and [OpenNMT-tf](https://github.com/OpenNMT/OpenNMT-tf), give the choice between [PyTorch](https://pytorch.org/) and [TensorFlow](https://www.tensorflow.org/) which are 2 of the most popular deep learning toolkits.
 * The implementations are packed with [many configurable models and features](/features) including for other generation tasks: summarization, speech to text, image to text, etc.
 * The [OpenNMT ecosystem](https://github.com/OpenNMT) includes tools and projects to cover the full NMT workflow:
-  * [CTranslate2](https://github.com/OpenNMT/CTranslate2), an optimized inference engine for OpenNMT models which explores model quantization and inference acceleration on CPU and GPU
+  * [CTranslate2](https://github.com/OpenNMT/CTranslate2), a fast inference engine for OpenNMT models which explores model quantization and inference acceleration on CPU and GPU
   * [Tokenizer](https://github.com/OpenNMT/Tokenizer), a fast and customizable text tokenization library
 * The NMT systems are able to reach high translation quality and speed, on par with the best online translation offerings.
 * You get reactive and free support on the [community forum](http://forum.opennmt.net/).

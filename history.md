@@ -5,8 +5,9 @@ order: 2
 ---
 
 {:#history}
+| May 2020 | OpenNMT models are the most efficient on several metrics at [WNGT 2020](https://sites.google.com/view/wngt20/efficiency-task) using the [CTranslate2](https://github.com/OpenNMT/CTranslate2) inference engine. |
 | October 2019 | Release of [OpenNMT-tf 2.0](https://github.com/OpenNMT/OpenNMT-tf/releases/tag/v2.0.0) using [TensorFlow 2.0](https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html). |
-| October 2019 | Publication of [CTranslate2](https://github.com/OpenNMT/CTranslate2), a redesign of the original CTranslate to support OpenNMT-py and OpenNMT-tf models. |
+| October 2019 | Publication of [CTranslate2](https://github.com/OpenNMT/CTranslate2), a redesign of the original CTranslate to support fast execution of OpenNMT-py and OpenNMT-tf models. |
 | August 2018 | OpenNMT publishes the fastest model running on a single CPU core at [WNMT 2018](https://aclweb.org/anthology/papers/W/W18/W18-2715/) using the CTranslate engine. |
 | July 2018 | Last version of the original LuaTorch implementation, now fully superseded by OpenNMT-py and PyTorch. |
 | March 2018 | The first [OpenNMT workshop](http://workshop-paris-2018.opennmt.net/) is held in Paris gathering more than 100 people from around the world. |
