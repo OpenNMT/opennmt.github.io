@@ -3,7 +3,7 @@ layout: page
 title: Publications
 ---
 
-If you are using OpenNMT for academic work, please cite the initial [system demonstration paper](https://www.aclweb.org/anthology/P17-4012) for ACL 2017:
+If you are using OpenNMT for academic work, please cite the initial [system demonstration paper](https://www.aclweb.org/anthology/P17-4012) published in ACL 2017:
 
 ```
 @inproceedings{klein-etal-2017-opennmt,
@@ -23,26 +23,11 @@ If you are using OpenNMT for academic work, please cite the initial [system demo
 }
 ```
 
-We also published an [updated version](https://www.aclweb.org/anthology/W18-1817) for AMTA 2018:
+Other papers were also published more recently:
 
-```
-@inproceedings{klein-etal-2018-opennmt,
-    title = "{O}pen{NMT}: Neural Machine Translation Toolkit",
-    author = "Klein, Guillaume  and
-      Kim, Yoon  and
-      Deng, Yuntian  and
-      Nguyen, Vincent  and
-      Senellart, Jean  and
-      Rush, Alexander",
-    booktitle = "Proceedings of the 13th Conference of the Association for Machine Translation in the {A}mericas (Volume 1: Research Papers)",
-    month = mar,
-    year = "2018",
-    address = "Boston, MA",
-    publisher = "Association for Machine Translation in the Americas",
-    url = "https://www.aclweb.org/anthology/W18-1817",
-    pages = "177--184",
-}
-```
+{:.publications-list}
+* [The OpenNMT Neural Machine Translation Toolkit: 2020 Edition](https://www.aclweb.org/anthology/2020.amta-research.9/). Guillaume Klein, François Hernandez, Vincent Nguyen, Jean Senellart. AMTA 2020
+* [OpenNMT: Neural Machine Translation Toolkit](https://www.aclweb.org/anthology/W18-1817). Guillaume Klein, Yoon Kim, Yuntian Deng, Vincent Nguyen, Jean Senellart, Alexander Rush. AMTA 2018
 
 ## Research
 
