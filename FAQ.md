@@ -64,27 +64,6 @@ If you are using the project for academic work, please cite the initial [system 
 }
 ```
 
-We also published an [updated version](https://www.aclweb.org/anthology/W18-1817) for AMTA 2018:
-
-```
-@inproceedings{klein-etal-2018-opennmt,
-    title = "{O}pen{NMT}: Neural Machine Translation Toolkit",
-    author = "Klein, Guillaume  and
-      Kim, Yoon  and
-      Deng, Yuntian  and
-      Nguyen, Vincent  and
-      Senellart, Jean  and
-      Rush, Alexander",
-    booktitle = "Proceedings of the 13th Conference of the Association for Machine Translation in the {A}mericas (Volume 1: Research Papers)",
-    month = mar,
-    year = "2018",
-    address = "Boston, MA",
-    publisher = "Association for Machine Translation in the Americas",
-    url = "https://www.aclweb.org/anthology/W18-1817",
-    pages = "177--184",
-}
-```
-
 ### Where can I get support?
 
 The [OpenNMT forum](http://forum.opennmt.net/) is the place to go for asking general questions or requesting support. You can usually expect a reply within 1 or 2 work days.
