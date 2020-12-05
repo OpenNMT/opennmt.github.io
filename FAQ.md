@@ -78,7 +78,7 @@ We recommend starting with the [ACL'16 NMT](https://sites.google.com/site/acl16n
 
 ### What do I need to train a NMT model?
 
-You just need two files: a source file and a target file, each with one sentence per line with words that are space separated. These files can come from standard free translation corpora such a [WMT](http://www.statmt.org/wmt19/), or it can be any other sources you want to train from.
+You just need two files: a source file and a target file, each with one sentence per line with words that are space separated. These files can come from standard free translation corpora such as [WMT](http://www.statmt.org/wmt19/), or it can be any other sources you want to train from.
 
 ### What type of computer do I need to train with?
 
