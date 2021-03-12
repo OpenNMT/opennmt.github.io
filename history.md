@@ -5,6 +5,7 @@ order: 2
 ---
 
 {:#history}
+| January 2021 | Release of [OpenNMT-py 2.0](https://github.com/OpenNMT/OpenNMT-py/releases/tag/2.0.0rc1) featuring a new dynamic data pipeline |
 | May 2020 | OpenNMT models are the most efficient on several metrics at [WNGT 2020](https://sites.google.com/view/wngt20/efficiency-task) using the [CTranslate2](https://github.com/OpenNMT/CTranslate2) inference engine. |
 | October 2019 | Release of [OpenNMT-tf 2.0](https://github.com/OpenNMT/OpenNMT-tf/releases/tag/v2.0.0) using [TensorFlow 2.0](https://blog.tensorflow.org/2019/09/tensorflow-20-is-now-available.html). |
 | October 2019 | Publication of [CTranslate2](https://github.com/OpenNMT/CTranslate2), a redesign of the original CTranslate to support fast execution of OpenNMT-py and OpenNMT-tf models. |
