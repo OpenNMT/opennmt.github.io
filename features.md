@@ -13,7 +13,7 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
 | Image to text | ✓ | |
-| Language modeling | | ✓ |
+| Language modeling | ✓ | ✓ |
 | Sequence classification | | ✓ |
 | Sequence tagging | | ✓ |
 | Sequence to sequence | ✓ | ✓ |
@@ -36,10 +36,11 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
+| Cascaded and multi-column encoder | | ✓ |
 | [Copy attention](https://arxiv.org/abs/1603.06393) | ✓ | |
 | [Coverage attention](https://arxiv.org/abs/1601.04811) | ✓ | |
 | Hybrid models | | ✓ |
-| Multi source | | ✓ |
+| Multiple source | | ✓ |
 | Multiple input features | ✓ | ✓ |
 | [Relative position representations](https://arxiv.org/abs/1803.02155) | ✓ | ✓ |
 | Tied embeddings | ✓ | ✓ |
@@ -49,7 +50,9 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
 | Automatic evaluation | ✓ | ✓ |
+| Automatic model export | | ✓ |
 | [Contrastive learning](https://ai.google/research/pubs/pub48253/) | | ✓ |
+| Data augmentation (e.g. noise) | ✓ | ✓ |
 | Early stopping | ✓ | ✓ |
 | Gradient accumulation | ✓ | ✓ |
 | Supervised alignment | ✓ | ✓ |
@@ -57,9 +60,10 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | Moving average | ✓ | ✓ |
 | Multi-GPU | ✓ | ✓ |
 | Multi-node | ✓ | ✓ |
-| Online tokenization | | ✓ |
+| On-the-fly tokenization | ✓ | ✓ |
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
+| Sentence weighting | | ✓ |
 | Vocabulary update | | ✓ |
 | Weighted dataset | ✓ | ✓ |
 
@@ -69,7 +73,7 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | --- | :---: | :---: |
 | Beam search | ✓ | ✓ |
 | [Coverage penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
-| [CTranslate2](https://github.com/OpenNMT/CTranslate2) compatibility | ✓ | ✓ |
+| [CTranslate2 compatibility](https://github.com/OpenNMT/CTranslate2) | ✓ | ✓ |
 | Ensemble | ✓ | |
 | [Length penalty](https://arxiv.org/abs/1609.08144) | ✓ | ✓ |
 | N-best rescoring | ✓ | ✓ |
@@ -81,5 +85,5 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 
 For more details on how to use these features, please refer to the documentation of each project:
 
-* [OpenNMT-py](http://opennmt.net/OpenNMT-py)
-* [OpenNMT-tf](http://opennmt.net/OpenNMT-tf)
+* [OpenNMT-py](https://opennmt.net/OpenNMT-py)
+* [OpenNMT-tf](https://opennmt.net/OpenNMT-tf)
