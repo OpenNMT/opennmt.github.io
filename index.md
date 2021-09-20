@@ -18,7 +18,7 @@ Started in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) gro
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/OpenNMT-py">
                 <img src="public/pytorch.png" alt="PyTorch"/>
                 <div class="project"><strong>OpenNMT-py</strong></div>
-                <p>User-friendly and multimodal, benefiting from PyTorch ease of use.</p>
+                <p>User-friendly and multimodal, benefitting from PyTorch ease of use.</p>
             </a>
             <ul>
                 <li><a href="/OpenNMT-py">Documentation</a></li>
