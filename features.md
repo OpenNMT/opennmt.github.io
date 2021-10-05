@@ -12,12 +12,12 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
-| Image to text | ✓ | |
+| Image to text | ✓ (v1.x only) | |
 | Language modeling | ✓ | ✓ |
 | Sequence classification | | ✓ |
 | Sequence tagging | | ✓ |
 | Sequence to sequence | ✓ | ✓ |
-| Speech to text | ✓ | ✓ |
+| Speech to text | ✓ (v1.x only) | ✓ |
 | Summarization | ✓ | |
 
 ## Models
@@ -25,9 +25,9 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | | OpenNMT-py | OpenNMT-tf |
 | --- | :---: | :---: |
 | [ConvS2S](https://arxiv.org/abs/1705.03122) | ✓ | |
-| [DeepSpeech2](https://arxiv.org/abs/1512.02595v1) | ✓ | |
-| [GPT-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) | | ✓ |
-| [Im2Text](https://arxiv.org/abs/1609.04938) | ✓ | |
+| [DeepSpeech2](https://arxiv.org/abs/1512.02595v1) | ✓ (v1.x only) | |
+| [GPT-2](https://d4mucfpksywv.cloudfront.net/better-language-models/language-models.pdf) | ✓ | ✓ |
+| [Im2Text](https://arxiv.org/abs/1609.04938) | ✓ (v1.x only) | |
 | [Listen, Attend and Spell](https://arxiv.org/abs/1508.01211) | | ✓ |
 | [RNN with attention](https://arxiv.org/abs/1508.04025) | ✓ | ✓ |
 | [Transformer](https://arxiv.org/abs/1706.03762) | ✓ | ✓ |
@@ -64,7 +64,7 @@ While OpenNMT initially focused on standard sequence to sequence models applied 
 | Pretrained embeddings | ✓ | ✓ |
 | [Scheduled sampling](https://arxiv.org/abs/1506.03099) | | ✓ |
 | Sentence weighting | | ✓ |
-| Vocabulary update | | ✓ |
+| Vocabulary update | ✓ | ✓ |
 | Weighted dataset | ✓ | ✓ |
 
 ## Decoding
