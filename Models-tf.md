@@ -26,6 +26,6 @@ This page lists pretrained models for OpenNMT-tf.
 | | Softcatalà production ready models from Catalan to multiple languages (English, German, etc)  - Transformer |
 | --- | --- |
 | Downloads | https://github.com/Softcatala/nmt-models (CTranslate2 and TensorFlow models) |
-| Configuration |TransformerRelative model with SetencePiece tokenizer |
+| Configuration |TransformerRelative model with SentencePiece tokenizer |
 | Data | https://github.com/Softcatala/parallel-catalan-corpus |
 | BLEU | Different BLEU scores depending on the model |
