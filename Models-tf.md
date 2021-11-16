@@ -28,4 +28,4 @@ This page lists pretrained models for OpenNMT-tf.
 | Downloads | https://github.com/Softcatala/nmt-models (CTranslate2 and TensorFlow models) |
 | Configuration |TransformerRelative model with SentencePiece tokenizer |
 | Data | https://github.com/Softcatala/parallel-catalan-corpus |
-| BLEU | Different BLEU scores depending on the model |
+| BLEU | https://github.com/Softcatala/nmt-models#models |
