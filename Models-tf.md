@@ -16,10 +16,11 @@ This page lists pretrained models for OpenNMT-tf.
 | Data | [WMT](https://s3.amazonaws.com/opennmt-trainingdata/wmt_ende_sp.tar.gz) with shared SentencePiece model |
 | BLEU | newstest2014 = 26.9<br/>newstest2017 = 28.0 |
 
+{:.pretrained}
 | | Catalan to multiple languages (English, German, etc) - Transformer |
 | --- | --- |
 | Author | Softcatalà |
-| Downloads | https://github.com/Softcatala/nmt-models (CTranslate2 and TensorFlow models) |
-| Configuration |TransformerRelative model with SentencePiece tokenizer |
-| Data | https://github.com/Softcatala/parallel-catalan-corpus |
-| BLEU | https://github.com/Softcatala/nmt-models#models |
+| Downloads | [CTranslate2 and TensorFlow models](https://github.com/Softcatala/nmt-models) |
+| Configuration | TransformerRelative model with SentencePiece tokenizer |
+| Data | [https://github.com/Softcatala/parallel-catalan-corpus](https://github.com/Softcatala/parallel-catalan-corpus) |
+| BLEU | [https://github.com/Softcatala/nmt-models#models](https://github.com/Softcatala/nmt-models#models) |
