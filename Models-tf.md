@@ -16,15 +16,9 @@ This page lists pretrained models for OpenNMT-tf.
 | BLEU | newstest2014 = 26.9<br/>newstest2017 = 28.0 |
 
 
-| | Argos Open Tech translate models (English from/to several languages)  - Transformer |
+| | Catalan to multiple languages (English, German, etc) - Transformer |
 | --- | --- |
-| Downloads | https://www.argosopentech.com/argospm/index/ (CTranslate2 models) |
-| Configuration |Transformer model with SetencePiece tokenizer |
-| BLEU | Different BLEU scores depending on the model |
-
-
-| | Softcatalà production ready models from Catalan to multiple languages (English, German, etc)  - Transformer |
-| --- | --- |
+| Author | Softcatalà |
 | Downloads | https://github.com/Softcatala/nmt-models (CTranslate2 and TensorFlow models) |
 | Configuration |TransformerRelative model with SentencePiece tokenizer |
 | Data | https://github.com/Softcatala/parallel-catalan-corpus |
