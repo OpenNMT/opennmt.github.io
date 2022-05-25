@@ -52,29 +52,20 @@ Each implementation has its own set of [unique features](/features) but shares s
         <div class="card">
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/CTranslate2">
                 <div class="project"><strong>CTranslate2</strong></div>
-                <p>Fast inference engine for OpenNMT models.</p>
+                <p>Efficient inference engine for Transformer models on CPU and GPU.</p>
             </a>
+            <ul>
+                <li><a href="/CTranslate2">Documentation</a></li>
+            </ul>
         </div>
         <div class="card">
             <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/Tokenizer">
                 <div class="project"><strong>Tokenizer</strong></div>
-                <p>Fast and customizable text tokenization library with C++ and Python APIs.</p>
+                <p>Fast and customizable text tokenization library with BPE and SentencePiece support.</p>
             </a>
-        </div>
-    </div>
-
-    <div class="cards" id="cards-secondary">
-        <div class="card">
-            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/nmt-wizard-docker">
-                <div class="project"><strong>nmt-wizard-docker</strong></div>
-                <p>Docker-based wrapper for training and translating using a standardized interface.</p>
-            </a>
-        </div>
-        <div class="card">
-            <a class="card-main" title="See on GitHub" href="https://github.com/OpenNMT/nmt-wizard">
-                <div class="project"><strong>nmt-wizard</strong></div>
-                <p>Tasks launcher and monitor on remote platforms (SSH, EC2, etc.).</p>
-            </a>
+            <ul>
+                <li><a href="https://github.com/OpenNMT/Tokenizer/blob/master/bindings/python/README.md">Documentation</a></li>
+            </ul>
         </div>
     </div>
 </p>

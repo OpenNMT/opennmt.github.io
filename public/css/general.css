@@ -155,9 +155,6 @@ nav ul li+li {
 #cards-secondary .project {
     font-size: 1.1em;
 }
-#cards-secondary .card-main {
-    height: 100%;
-}
 
 #history, #history td {
     border: none;
