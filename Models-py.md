@@ -23,9 +23,7 @@ This page lists pretrained models for OpenNMT-py.
 {:.pretrained}
 | | New! v3 English-German - Transformer Large ([download](https://s3.amazonaws.com/opennmt-models/v3-py/ende/ende-large-withoutBT.pt)) |
 | --- | --- |
-| BPE Model | [BPE](https://s3.amazonaws.com/opennmt-models/v3-py/ende/subwords.en_de.bpe) <br/> '{"mode": "aggressive", "joiner_annotate": True, "preserve_placeholders":
-  True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens":
-  True, "segment_case": True, "segment_numbers": True, "segment_alphabet_change": True}' |
+| BPE Model | [BPE](https://s3.amazonaws.com/opennmt-models/v3-py/ende/subwords.en_de.bpe) <br/> '{"mode": "aggressive", "joiner_annotate": True, "preserve_placeholders": True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens": True, "segment_case": True, "segment_numbers": True, "segment_alphabet_change": True}' |
 | BLEU | newstest2014 = 31.2<br/>newstest2016 = 40.7<br/>newstest2017 = 32.9<br/>newstest2018 = 49.1<br/>newstest2019 = 45.9 |
 
 {:.pretrained}
