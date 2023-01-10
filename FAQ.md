@@ -29,8 +29,8 @@ Here are some reasons to use OpenNMT:
 OpenNMT is currently supported by the companies [SYSTRAN](http://www.systransoft.com/) and [Ubiqus](https://www.ubiqus.com/). The main maintainers are:
 
 * [Guillaume Klein](https://github.com/guillaumekln) (SYSTRAN)
-* [Vincent Nguyen](https://github.com/vince62s) (Ubiqus)
-* [Jean Senellart](https://github.com/jsenellart) (SYSTRAN)
+* [François Hernandez](https://github.com/francoishernandez) (UBIQUS)
+* [Vincent Nguyen](https://github.com/vince62s) (Independant researcher)
 
 The project was initiated in December 2016 by the [Harvard NLP](https://nlp.seas.harvard.edu/) group and SYSTRAN.
 
@@ -78,7 +78,7 @@ We recommend starting with the [ACL'16 NMT](https://sites.google.com/site/acl16n
 
 ### What do I need to train a NMT model?
 
-You just need two files: a source file and a target file, each with one sentence per line with words that are space separated. These files can come from standard free translation corpora such as [WMT](http://www.statmt.org/wmt19/), or it can be any other sources you want to train from.
+You just need two files: a source file and a target file, each with one sentence per line with words that are space separated. These files can come from standard free translation corpora such as [WMT](http://www.statmt.org/wmt22/), or it can be any other sources you want to train from.
 
 ### What type of computer do I need to train with?
 
@@ -106,6 +106,3 @@ Yes. OpenNMT is a general-purpose attention-based sequence to sequence system. T
 
 For the case of summarization, OpenNMT has been shown to be more effective than neural systems like [NAMAS](https://github.com/facebook/NAMAS), and will be supported going forward. See the [OpenNMT-py models](/Models-py) page for a pretrained summarization system on the Gigaword dataset.
 
-### I am interested in variants of seq2seq such as image-to-text generation. Can OpenNMT work for these?
-
-Yes. OpenNMT-py includes a relatively general-purpose [im2text](http://opennmt.net/OpenNMT-py/im2text.html) system, with a small amount of additional code. Feel free to use this as a model for extending OpenNMT.
