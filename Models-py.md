@@ -11,10 +11,28 @@ This page lists pretrained models for OpenNMT-py.
 ## Translation
 
 {:.pretrained}
-| | English-German - Transformer ([download](https://s3.amazonaws.com/opennmt-models/transformer-ende-wmt-pyOnmt.tar.gz)) |
+| | New! NLLB 200 3.3B - Transformer ([download](https://s3.amazonaws.com/opennmt-models/nllb-200/nllb-200-3.3B-onmt.pt)) |
+| | New! NLLB 200 1.3B - Transformer ([download](https://s3.amazonaws.com/opennmt-models/nllb-200/nllb-200-1.3B-onmt.pt)) |
+| | New! NLLB 200 1.3B distilled - Transformer ([download](https://s3.amazonaws.com/opennmt-models/nllb-200/nllb-200-1.3Bdst-onmt.pt)) |
+| | New! NLLB 200 600M - Transformer ([download](https://s3.amazonaws.com/opennmt-models/nllb-200/nllb-200-600M-onmt.pt)) |
+| --- | --- |
+| Configuration | Yaml file example to run inference [inference config](https://s3.amazonaws.com/opennmt-models/nllb-200/nllb-inference.yaml)<br/> Please change the source and terget languages in the yaml |
+| Sentence Piece model | [SP Model](https://s3.amazonaws.com/opennmt-models/nllb-200/flores200_sacrebleu_tokenizer_spm.model) |
+| Results | cf [Forum](https://forum.opennmt.net/t/nllb-200-with-opennmt-py-the-good-the-bad-and-the-ugly/5151) |
+
+{:.pretrained}
+| | New! v3 English-German - Transformer Large ([download](https://s3.amazonaws.com/opennmt-models/v3-py/ende/ende-large-withoutBT.pt)) |
+| --- | --- |
+| BPE Model | [BPE](https://s3.amazonaws.com/opennmt-models/v3-py/ende/subwords.en_de.bpe) <br/> '{"mode": "aggressive", "joiner_annotate": True, "preserve_placeholders":
+  True, "case_markup": True, "soft_case_regions": True, "preserve_segmented_tokens":
+  True, "segment_case": True, "segment_numbers": True, "segment_alphabet_change": True}' |
+| BLEU | newstest2014 = 31.2<br/>newstest2016 = 40.7<br/>newstest2017 = 32.9<br/>newstest2018 = 49.1<br/>newstest2019 = 45.9 |
+
+{:.pretrained}
+| | English-German - v2 format model Transformer ([download](https://s3.amazonaws.com/opennmt-models/transformer-ende-wmt-pyOnmt.tar.gz)) |
 | --- | --- |
 | Configuration | Base Transformer configuration with standard [training options](http://opennmt.net/OpenNMT-py/FAQ.html#how-do-i-use-the-transformer-model-do-you-support-multi-gpu) |
-| Data | [WMT](https://s3.amazonaws.com/opennmt-trainingdata/wmt_ende_sp.tar.gz) with shared SentencePiece model |
+| Data | [WMT](https://s3.amazonaws.com/opennmt-trainingdata/wmt_ende_sp.tar.gz) with shared SentencePiece model<br/>Original Paper replication |
 | BLEU | newstest2014 = 26.89<br/>newstest2017 = 28.09 |
 
 {:.pretrained}
